@@ -53,20 +53,7 @@
     --gradient-card: linear-gradient(135deg, var(--white) 0%, var(--pearl) 100%);
     --gradient-dark: linear-gradient(135deg, var(--black) 0%, var(--dusty-rose) 100%);
     --gradient-light: linear-gradient(135deg, var(--pearl) 0%, var(--soft-pink) 100%);
-    --gradient-loading: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f9a8d4 50%, #f472b6 75%, #ec4899 100%);
-    
-    /* Animação do gradiente de carregamento */
-    @keyframes gradientShift {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
+    --gradient-loading: linear-gradient(135deg, var(--dusty-rose) 0%, var(--deep-rose) 50%, var(--primary-rose) 100%);
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -179,9 +166,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f9a8d4 50%, #f472b6 75%, #ec4899 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease-in-out infinite;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--vivid-azure) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1423,14 +1408,12 @@ section::before {
     align-items: flex-start;
     gap: var(--space-lg);
     padding: var(--space-xl);
-    background: rgba(244, 114, 182, 0.1);
+    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--blush-pink) 100%);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
     opacity: 0;
     transform: translateY(30px);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
 }
 
 .expertise-item.animate {
@@ -1439,10 +1422,8 @@ section::before {
 }
 
 .expertise-item:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-xl);
 }
 
 .expertise-icon {
@@ -1525,20 +1506,16 @@ section::before {
 }
 
 .service-card {
-    background: rgba(244, 114, 182, 0.1);
+    background: var(--white);
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
 }
 
 .service-card:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-xl);
 }
 
 .service-image {
@@ -1731,18 +1708,10 @@ section::before {
 }
 
 .testimonial-content {
-    background: rgba(244, 114, 182, 0.1);
+    background: var(--gradient-card);
     padding: var(--space-3xl);
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-lg);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
-    transition: all var(--transition-base);
-}
-
-.testimonial-content:hover {
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-lg);
 }
 
 .stars {
@@ -1832,19 +1801,15 @@ section::before {
     align-items: flex-start;
     gap: var(--space-lg);
     padding: var(--space-xl);
-    background: rgba(244, 114, 182, 0.1);
+    background: var(--white);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
 }
 
 .contact-card:hover {
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-lg);
 }
 
 .contact-icon {

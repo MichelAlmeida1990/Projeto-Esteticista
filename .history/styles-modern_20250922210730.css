@@ -1,9 +1,9 @@
-/* Modern CSS Variables - Paleta Suave e Elegante */
+/* Modern CSS Variables - Rosa Delicada */
 :root {
-    /* Paleta Principal - Tons Suaves e Elegantes */
-    --primary-rose: #f472b6;
-    --soft-pink: #fdf2f8;
-    --blush-pink: #fce7f3;
+    /* Paleta Rosa Delicada */
+    --primary-rose: #f4a6cd;
+    --soft-pink: #fce7f3;
+    --blush-pink: #fbcfe8;
     --rose-pink: #f9a8d4;
     --deep-rose: #ec4899;
     --dusty-rose: #be185d;
@@ -12,27 +12,15 @@
     --white: #ffffff;
     --black: #1f2937;
     
-    /* Tons Complementares Sofisticados */
-    --lavender: #a855f7;
-    --peach: #fb7185;
-    --coral: #f87171;
-    --mauve: #c084fc;
-    --champagne: #fde68a;
-    --lilac: #a78bfa;
+    /* Rosa Complementares */
+    --lavender: #e879f9;
+    --peach: #fed7aa;
+    --coral: #fca5a5;
+    --mauve: #d8b4fe;
+    --champagne: #fef3c7;
+    --lilac: #c084fc;
     --light-lilac: #e9d5ff;
     --soft-lilac: #f3e8ff;
-    
-    /* Tons Neutros Elegantes */
-    --slate-50: #f8fafc;
-    --slate-100: #f1f5f9;
-    --slate-200: #e2e8f0;
-    --slate-300: #cbd5e1;
-    --slate-400: #94a3b8;
-    --slate-500: #64748b;
-    --slate-600: #475569;
-    --slate-700: #334155;
-    --slate-800: #1e293b;
-    --slate-900: #0f172a;
     
     /* Modern Neutral Palette */
     --gray-50: #fdf2f8;
@@ -46,27 +34,11 @@
     --gray-800: #9d174d;
     --gray-900: #831843;
     
-    /* Gradientes Suaves e Elegantes */
+    /* Gradientes Rosa Delicados */
     --gradient-primary: linear-gradient(135deg, var(--primary-rose) 0%, var(--deep-rose) 100%);
     --gradient-accent: linear-gradient(135deg, var(--lavender) 0%, var(--primary-rose) 100%);
     --gradient-hero: linear-gradient(135deg, var(--cream) 0%, var(--soft-pink) 100%);
     --gradient-card: linear-gradient(135deg, var(--white) 0%, var(--pearl) 100%);
-    --gradient-dark: linear-gradient(135deg, var(--black) 0%, var(--dusty-rose) 100%);
-    --gradient-light: linear-gradient(135deg, var(--pearl) 0%, var(--soft-pink) 100%);
-    --gradient-loading: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f9a8d4 50%, #f472b6 75%, #ec4899 100%);
-    
-    /* Animação do gradiente de carregamento */
-    @keyframes gradientShift {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -179,9 +151,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f9a8d4 50%, #f472b6 75%, #ec4899 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease-in-out infinite;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--vivid-azure) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -586,95 +556,6 @@ ul {
     align-items: baseline;
     position: relative;
     cursor: pointer;
-    /* Animação automática em loop infinito */
-    animation: logoGlow 3s ease-in-out infinite;
-}
-
-/* Animação automática do logo */
-@keyframes logoGlow {
-    0%, 100% {
-        transform: scale(1);
-        text-shadow: 0 0 10px rgba(244, 166, 205, 0.5);
-    }
-    50% {
-        transform: scale(1.05);
-        text-shadow: 0 0 20px rgba(244, 166, 205, 0.8), 0 0 30px rgba(236, 72, 153, 0.6);
-    }
-}
-
-/* 💕 Corações Flutuantes */
-.floating-hearts {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.heart {
-    position: absolute;
-    font-size: 20px;
-    color: var(--primary-rose);
-    opacity: 0.8;
-    animation: heartFall linear infinite;
-    pointer-events: none;
-    text-shadow: 0 0 15px rgba(244, 114, 182, 0.6);
-}
-
-.heart:nth-child(odd) {
-    color: var(--lavender);
-    text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
-}
-
-.heart:nth-child(3n) {
-    color: var(--peach);
-    text-shadow: 0 0 15px rgba(251, 113, 133, 0.6);
-}
-
-@keyframes heartFall {
-    0% {
-        transform: translateY(-100vh) rotate(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-/* Variações de tamanho e velocidade - MAIS LENTOS */
-.heart.small {
-    font-size: 16px;
-    animation-duration: 12s;
-}
-
-.heart.medium {
-    font-size: 24px;
-    animation-duration: 10s;
-}
-
-.heart.large {
-    font-size: 32px;
-    animation-duration: 8s;
-}
-
-/* Efeito de brilho nos corações */
-.heart::before {
-    content: '✨';
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    font-size: 0.5em;
-    opacity: 0;
-    animation: sparkle 2s ease-in-out infinite;
-}
-
-@keyframes sparkle {
-    0%, 100% { opacity: 0; transform: scale(0); }
-    50% { opacity: 1; transform: scale(1); }
 }
 
 .logo-letter {
@@ -940,95 +821,35 @@ ul {
     position: relative;
 }
 
-/* Estilo das letras individuais */
-.letter {
-    display: inline-block;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.letter:hover {
-    transform: scale(1.2) rotate(5deg);
+.title-sub:hover {
     color: var(--lavender);
-    text-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
+    transform: translateX(10px);
+    text-shadow: 0 5px 15px rgba(168, 85, 247, 0.4);
 }
 
-/* Animação das letras sumindo e voltando */
-@keyframes letterDisappear {
+/* Animação de entrada */
+@keyframes titleSlideIn {
     0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    50% {
         opacity: 0;
-        transform: scale(0.8) rotate(180deg);
+        transform: translateY(30px);
     }
     100% {
         opacity: 1;
-        transform: scale(1) rotate(360deg);
+        transform: translateY(0);
     }
 }
 
-/* Animação de entrada sequencial */
-@keyframes letterSlideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px) rotateX(90deg);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) rotateX(0deg);
-    }
+.hero-title {
+    animation: titleSlideIn 1s ease-out;
 }
 
-/* Aplicar animação de entrada nas letras */
-.letter {
-    animation: letterSlideIn 0.6s ease-out both;
+.title-main {
+    animation: titleSlideIn 1s ease-out 0.2s both;
 }
 
-/* Delays para cada letra */
-.title-main .letter:nth-child(1) { animation-delay: 0.1s; }
-.title-main .letter:nth-child(2) { animation-delay: 0.15s; }
-.title-main .letter:nth-child(3) { animation-delay: 0.2s; }
-.title-main .letter:nth-child(4) { animation-delay: 0.25s; }
-.title-main .letter:nth-child(5) { animation-delay: 0.3s; }
-.title-main .letter:nth-child(6) { animation-delay: 0.35s; }
-.title-main .letter:nth-child(7) { animation-delay: 0.4s; }
-.title-main .letter:nth-child(8) { animation-delay: 0.45s; }
-.title-main .letter:nth-child(9) { animation-delay: 0.5s; }
-.title-main .letter:nth-child(10) { animation-delay: 0.55s; }
-.title-main .letter:nth-child(11) { animation-delay: 0.6s; }
-.title-main .letter:nth-child(12) { animation-delay: 0.65s; }
-.title-main .letter:nth-child(13) { animation-delay: 0.7s; }
-.title-main .letter:nth-child(14) { animation-delay: 0.75s; }
-.title-main .letter:nth-child(15) { animation-delay: 0.8s; }
-.title-main .letter:nth-child(16) { animation-delay: 0.85s; }
-
-.title-sub .letter:nth-child(1) { animation-delay: 1s; }
-.title-sub .letter:nth-child(2) { animation-delay: 1.05s; }
-.title-sub .letter:nth-child(3) { animation-delay: 1.1s; }
-.title-sub .letter:nth-child(4) { animation-delay: 1.15s; }
-.title-sub .letter:nth-child(5) { animation-delay: 1.2s; }
-.title-sub .letter:nth-child(6) { animation-delay: 1.25s; }
-.title-sub .letter:nth-child(7) { animation-delay: 1.3s; }
-.title-sub .letter:nth-child(8) { animation-delay: 1.35s; }
-.title-sub .letter:nth-child(9) { animation-delay: 1.4s; }
-.title-sub .letter:nth-child(10) { animation-delay: 1.45s; }
-.title-sub .letter:nth-child(11) { animation-delay: 1.5s; }
-.title-sub .letter:nth-child(12) { animation-delay: 1.55s; }
-.title-sub .letter:nth-child(13) { animation-delay: 1.6s; }
-.title-sub .letter:nth-child(14) { animation-delay: 1.65s; }
-.title-sub .letter:nth-child(15) { animation-delay: 1.7s; }
-.title-sub .letter:nth-child(16) { animation-delay: 1.75s; }
-.title-sub .letter:nth-child(17) { animation-delay: 1.8s; }
-.title-sub .letter:nth-child(18) { animation-delay: 1.85s; }
-.title-sub .letter:nth-child(19) { animation-delay: 1.9s; }
-.title-sub .letter:nth-child(20) { animation-delay: 1.95s; }
-.title-sub .letter:nth-child(21) { animation-delay: 2s; }
-.title-sub .letter:nth-child(22) { animation-delay: 2.05s; }
-.title-sub .letter:nth-child(23) { animation-delay: 2.1s; }
-.title-sub .letter:nth-child(24) { animation-delay: 2.15s; }
-.title-sub .letter:nth-child(25) { animation-delay: 2.2s; }
+.title-sub {
+    animation: titleSlideIn 1s ease-out 0.4s both;
+}
 
 .hero-description {
     font-size: 1.25rem;
@@ -1423,14 +1244,12 @@ section::before {
     align-items: flex-start;
     gap: var(--space-lg);
     padding: var(--space-xl);
-    background: rgba(244, 114, 182, 0.1);
+    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--blush-pink) 100%);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
     opacity: 0;
     transform: translateY(30px);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
 }
 
 .expertise-item.animate {
@@ -1439,10 +1258,8 @@ section::before {
 }
 
 .expertise-item:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-xl);
 }
 
 .expertise-icon {
@@ -1525,20 +1342,16 @@ section::before {
 }
 
 .service-card {
-    background: rgba(244, 114, 182, 0.1);
+    background: var(--white);
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
 }
 
 .service-card:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-xl);
 }
 
 .service-image {
@@ -1619,26 +1432,6 @@ section::before {
 /* Gallery Section */
 .gallery {
     background: var(--gradient-card);
-}
-
-/* Cards com Rosa Transparente e Bordas Acesas */
-.gallery-item {
-    position: relative;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    cursor: pointer;
-    transition: all var(--transition-base);
-    background: rgba(244, 114, 182, 0.1);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-xl);
 }
 
 .gallery-grid {
@@ -1731,18 +1524,10 @@ section::before {
 }
 
 .testimonial-content {
-    background: rgba(244, 114, 182, 0.1);
+    background: var(--gradient-card);
     padding: var(--space-3xl);
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-lg);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
-    transition: all var(--transition-base);
-}
-
-.testimonial-content:hover {
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-lg);
 }
 
 .stars {
@@ -1832,19 +1617,15 @@ section::before {
     align-items: flex-start;
     gap: var(--space-lg);
     padding: var(--space-xl);
-    background: rgba(244, 114, 182, 0.1);
+    background: var(--white);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
 }
 
 .contact-card:hover {
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-lg);
 }
 
 .contact-icon {

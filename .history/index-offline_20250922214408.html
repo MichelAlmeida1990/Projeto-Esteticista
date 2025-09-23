@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juliana Daiane - Esteticista especializada há 15 anos em tratamentos faciais e corporais domiciliares. Limpeza de pele, microagulhamento, drenagem linfática e muito mais.">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Juliana Daiane - Estética Premium Domiciliar</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles-modern.css">
+    
+    <style>
+        /* Fallback fonts caso Google Fonts não carregue */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .hero-title {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        
+        .cursive-logo {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        /* Loading screen simplificado - GRADIENTE ROSA ELEGANTE */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f9a8d4 50%, #f472b6 75%, #ec4899 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        /* Forçar atualização do cache */
+        .loading-screen::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f9a8d4 50%, #f472b6 75%, #ec4899 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .loading-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .loading-logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .loading-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .loading-progress {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: white;
+            width: 0%;
+            animation: loading 3s ease-in-out forwards;
+        }
+        
+        @keyframes loading {
+            to { width: 100%; }
+        }
+        
+        /* Esconder loading após carregamento */
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Garantir que o conteúdo principal apareça */
+        .main-content {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .main-content.loaded {
+            opacity: 1;
+        }
+        
+        /* Animação automática do logo */
+        .cursive-logo {
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes logoGlow {
+            0%, 100% {
+                transform: scale(1);
+                text-shadow: 0 0 10px rgba(244, 166, 205, 0.5);
+            }
+            50% {
+                transform: scale(1.05);
+                text-shadow: 0 0 20px rgba(244, 166, 205, 0.8), 0 0 30px rgba(236, 72, 153, 0.6);
+            }
+        }
+        
+        /* Animação das letras individuais */
+        .cursive-logo:hover {
+            animation: logoPulse 0.6s ease-in-out infinite;
+        }
+        
+        @keyframes logoPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        
+        /* Corações Flutuantes */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: #f472b6;
+            opacity: 0.8;
+            animation: heartFall linear infinite;
+            pointer-events: none;
+            text-shadow: 0 0 15px rgba(244, 114, 182, 0.6);
+        }
+        
+        .heart:nth-child(odd) {
+            color: #a855f7;
+            text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+        }
+        
+        .heart:nth-child(3n) {
+            color: #fb7185;
+            text-shadow: 0 0 15px rgba(251, 113, 133, 0.6);
+        }
+        
+        @keyframes heartFall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Variações de tamanho e velocidade - MAIS LENTOS */
+        .heart.small {
+            font-size: 16px;
+            animation-duration: 12s;
+        }
+        
+        .heart.medium {
+            font-size: 24px;
+            animation-duration: 10s;
+        }
+        
+        .heart.large {
+            font-size: 32px;
+            animation-duration: 8s;
+        }
+        
+        /* Efeito de brilho nos corações */
+        .heart::before {
+            content: '✨';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: 0.5em;
+            opacity: 0;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Corações Flutuantes -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">Juliana Daiane</div>
+            <div class="loading-text">Carregando experiência premium...</div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <div class="logo-container">
+                        <div class="cursive-logo" id="cursiveLogo">
+                            Juliana Daiane
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link">Início</a>
+                    <a href="#about" class="nav-link">Sobre</a>
+                    <a href="#services" class="nav-link">Serviços</a>
+                    <a href="#gallery" class="nav-link">Resultados</a>
+                    <a href="#contact" class="nav-link">Contato</a>
+                </div>
+                
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="title-main">Beleza & Bem-estar</span>
+                            <span class="title-sub">no conforto do seu lar</span>
+                        </h1>
+                        <p class="hero-description">
+                            Esteticista especializada há <strong>15 anos</strong> em tratamentos faciais e corporais. 
+                            Atendimento domiciliar personalizado com técnicas modernas e cuidado humanizado.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Anos de experiência</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Clientes satisfeitas</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Atendimento domiciliar</span>
+                            </div>
+                        </div>
+                        <div class="hero-cta">
+                            <a href="#contact" class="btn btn-primary">
+                                📱 Agendar Consulta
+                            </a>
+                            <a href="#services" class="btn btn-outline">
+                                Ver Serviços
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-container">
+                            <img src="assets/image/WhatsApp Image 2025-09-20 at 14.07.38 (1).jpeg" 
+                                 alt="Juliana Daiane - Esteticista Especializada" 
+                                 class="hero-img">
+                            <div class="image-overlay">
+                                <div class="floating-card">
+                                    ⭐ Juliana Daiane
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <p class="section-subtitle">Conheça minha trajetória e paixão pela estética</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="text-content">
+                            <h3>Juliana Daiane</h3>
+                            <p class="lead">
+                                Sou esteticista há <strong>15 anos</strong>, apaixonada por cuidar da beleza e do bem-estar. 
+                                Ao longo da minha trajetória, me especializei em tratamentos faciais e corporais, 
+                                unindo técnicas modernas e um atendimento humanizado para valorizar a autoestima de cada cliente.
+                            </p>
+                            <p>
+                                Meu compromisso é oferecer resultados eficazes, sempre com segurança, cuidado e carinho. 
+                                Acredito que cada pessoa merece se sentir bela e confiante, e é isso que me motiva todos os dias.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-images">
+                        <div class="profile-showcase">
+                            <div class="main-profile-card">
+                                <img src="assets/image/WhatsApp Image 2025-09-20 at 14.07.38.jpeg" 
+                                     alt="Juliana Daiane - Esteticista Profissional" 
+                                     class="profile-image" 
+                                     loading="lazy">
+                                <div class="profile-info">
+                                    <h4>Juliana Daiane</h4>
+                                    <p>Esteticista Especializada</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Meus Serviços</h2>
+                    <p class="section-subtitle">Tratamentos especializados no conforto da sua casa</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-content">
+                            <h3>🧴 Limpeza de Pele</h3>
+                            <p>Remoção de impurezas, cravos e células mortas para uma pele renovada e saudável.</p>
+                            <div class="service-features">
+                                <span class="feature">✨ Pele renovada</span>
+                                <span class="feature">🧴 Produtos premium</span>
+                                <span class="feature">🏠 Domiciliar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-content">
+                            <h3>💫 Microagulhamento</h3>
+                            <p>Estimula a produção de colágeno, reduzindo linhas de expressão e melhorando a textura da pele.</p>
+                            <div class="service-features">
+                                <span class="feature">🔄 Renovação celular</span>
+                                <span class="feature">💫 Anti-idade</span>
+                                <span class="feature">🏠 Domiciliar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-content">
+                            <h3>🌿 Peeling Mandélico</h3>
+                            <p>Renovação suave da pele com ácido mandélico, ideal para todos os tipos de pele.</p>
+                            <div class="service-features">
+                                <span class="feature">🌿 Suave</span>
+                                <span class="feature">✨ Renovador</span>
+                                <span class="feature">🏠 Domiciliar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-content">
+                            <h3>💧 Drenagem Linfática</h3>
+                            <p>Técnica manual que estimula o sistema linfático, reduzindo inchaços e melhorando a circulação.</p>
+                            <div class="service-features">
+                                <span class="feature">💧 Reduz inchaço</span>
+                                <span class="feature">🌊 Melhora circulação</span>
+                                <span class="feature">🏠 Domiciliar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Vamos Conversar?</h2>
+                    <p class="section-subtitle">Agende sua consulta e transforme sua autoestima</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                📱
+                            </div>
+                            <div class="contact-details">
+                                <h3>WhatsApp</h3>
+                                <p>Resposta rápida e agendamento fácil</p>
+                                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta." 
+                                   class="contact-link" target="_blank">
+                                   Chamar no WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                🏠
+                            </div>
+                            <div class="contact-details">
+                                <h3>Atendimento Domiciliar</h3>
+                                <p>Vou até você com todo o equipamento necessário</p>
+                                <span class="contact-link">100% na sua casa</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                🕐
+                            </div>
+                            <div class="contact-details">
+                                <h3>Horário de Atendimento</h3>
+                                <p>Segunda a Sábado</p>
+                                <span class="contact-link">8h às 18h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="logo-container">
+                            <div class="cursive-logo footer-logo">
+                                Juliana Daiane
+                            </div>
+                        </div>
+                        <p>Transformando vidas através da estética há 15 anos</p>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Juliana Daiane - Estética Premium. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Loading screen simplificado
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loadingScreen = document.getElementById('loadingScreen');
+                const mainContent = document.getElementById('mainContent');
+                
+                loadingScreen.classList.add('hidden');
+                mainContent.classList.add('loaded');
+                
+                // Remover loading screen após animação
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 3000); // 3 segundos de loading
+        });
+        
+        // Navegação suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Menu mobile
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+        }
+        
+        // 💕 Sistema de Corações Flutuantes
+        class FloatingHearts {
+            constructor() {
+                this.container = document.getElementById('floatingHearts');
+                this.hearts = [];
+                this.maxHearts = 15;
+                this.heartSymbols = ['💕', '💖', '💗', '💘', '💝', '💞', '💟', '❤️', '🧡', '💛', '💚', '💙', '💜', '🤍', '🖤'];
+                this.sizes = ['small', 'medium', 'large'];
+                this.init();
+            }
+            
+            init() {
+                // Criar corações iniciais
+                this.createInitialHearts();
+                
+                // Gerar novos corações periodicamente - MAIS LENTO
+                setInterval(() => {
+                    this.createHeart();
+                }, 4000); // Novo coração a cada 4 segundos
+                
+                // Limpar corações antigos
+                setInterval(() => {
+                    this.cleanupHearts();
+                }, 10000); // Limpeza a cada 10 segundos
+            }
+            
+            createInitialHearts() {
+                for (let i = 0; i < 5; i++) {
+                    setTimeout(() => {
+                        this.createHeart();
+                    }, i * 1000);
+                }
+            }
+            
+            createHeart() {
+                if (this.hearts.length >= this.maxHearts) return;
+                
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                
+                // Escolher símbolo aleatório
+                const symbol = this.heartSymbols[Math.floor(Math.random() * this.heartSymbols.length)];
+                heart.textContent = symbol;
+                
+                // Escolher tamanho aleatório
+                const size = this.sizes[Math.floor(Math.random() * this.sizes.length)];
+                heart.classList.add(size);
+                
+                // Posição horizontal aleatória
+                const leftPosition = Math.random() * 100;
+                heart.style.left = leftPosition + '%';
+                
+                // Adicionar ao container
+                this.container.appendChild(heart);
+                
+                // Adicionar à lista de corações
+                this.hearts.push(heart);
+                
+                // Remover após animação - AJUSTADO PARA VELOCIDADE MAIS LENTA
+                setTimeout(() => {
+                    if (heart.parentNode) {
+                        heart.parentNode.removeChild(heart);
+                    }
+                    const index = this.hearts.indexOf(heart);
+                    if (index > -1) {
+                        this.hearts.splice(index, 1);
+                    }
+                }, 13000); // Tempo baseado na animação mais longa (12s)
+            }
+            
+            cleanupHearts() {
+                // Remover corações que não estão mais visíveis
+                this.hearts = this.hearts.filter(heart => {
+                    if (!heart.parentNode) return false;
+                    
+                    const rect = heart.getBoundingClientRect();
+                    if (rect.top > window.innerHeight) {
+                        heart.parentNode.removeChild(heart);
+                        return false;
+                    }
+                    return true;
+                });
+            }
+            
+            // Método para pausar/retomar corações
+            pause() {
+                this.hearts.forEach(heart => {
+                    heart.style.animationPlayState = 'paused';
+                });
+            }
+            
+            resume() {
+                this.hearts.forEach(heart => {
+                    heart.style.animationPlayState = 'running';
+                });
+            }
+        }
+        
+        // Inicializar corações quando a página carregar
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                new FloatingHearts();
+            }, 4000); // Iniciar após o loading screen
+        });
+        
+        // Pausar corações quando a página não está visível (performance)
+        document.addEventListener('visibilitychange', function() {
+            if (window.floatingHearts) {
+                if (document.hidden) {
+                    window.floatingHearts.pause();
+                } else {
+                    window.floatingHearts.resume();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

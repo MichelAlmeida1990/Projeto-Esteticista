@@ -1,9 +1,9 @@
-/* Modern CSS Variables - Paleta Suave e Elegante */
+/* Modern CSS Variables - Rosa Delicada */
 :root {
-    /* Paleta Principal - Tons Suaves e Elegantes */
-    --primary-rose: #f472b6;
-    --soft-pink: #fdf2f8;
-    --blush-pink: #fce7f3;
+    /* Paleta Rosa Delicada */
+    --primary-rose: #f4a6cd;
+    --soft-pink: #fce7f3;
+    --blush-pink: #fbcfe8;
     --rose-pink: #f9a8d4;
     --deep-rose: #ec4899;
     --dusty-rose: #be185d;
@@ -12,27 +12,15 @@
     --white: #ffffff;
     --black: #1f2937;
     
-    /* Tons Complementares Sofisticados */
-    --lavender: #a855f7;
-    --peach: #fb7185;
-    --coral: #f87171;
-    --mauve: #c084fc;
-    --champagne: #fde68a;
-    --lilac: #a78bfa;
+    /* Rosa Complementares */
+    --lavender: #e879f9;
+    --peach: #fed7aa;
+    --coral: #fca5a5;
+    --mauve: #d8b4fe;
+    --champagne: #fef3c7;
+    --lilac: #c084fc;
     --light-lilac: #e9d5ff;
     --soft-lilac: #f3e8ff;
-    
-    /* Tons Neutros Elegantes */
-    --slate-50: #f8fafc;
-    --slate-100: #f1f5f9;
-    --slate-200: #e2e8f0;
-    --slate-300: #cbd5e1;
-    --slate-400: #94a3b8;
-    --slate-500: #64748b;
-    --slate-600: #475569;
-    --slate-700: #334155;
-    --slate-800: #1e293b;
-    --slate-900: #0f172a;
     
     /* Modern Neutral Palette */
     --gray-50: #fdf2f8;
@@ -46,27 +34,11 @@
     --gray-800: #9d174d;
     --gray-900: #831843;
     
-    /* Gradientes Suaves e Elegantes */
+    /* Gradientes Rosa Delicados */
     --gradient-primary: linear-gradient(135deg, var(--primary-rose) 0%, var(--deep-rose) 100%);
     --gradient-accent: linear-gradient(135deg, var(--lavender) 0%, var(--primary-rose) 100%);
     --gradient-hero: linear-gradient(135deg, var(--cream) 0%, var(--soft-pink) 100%);
     --gradient-card: linear-gradient(135deg, var(--white) 0%, var(--pearl) 100%);
-    --gradient-dark: linear-gradient(135deg, var(--black) 0%, var(--dusty-rose) 100%);
-    --gradient-light: linear-gradient(135deg, var(--pearl) 0%, var(--soft-pink) 100%);
-    --gradient-loading: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f9a8d4 50%, #f472b6 75%, #ec4899 100%);
-    
-    /* Animação do gradiente de carregamento */
-    @keyframes gradientShift {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -179,9 +151,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #f9a8d4 50%, #f472b6 75%, #ec4899 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease-in-out infinite;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--vivid-azure) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -600,81 +570,6 @@ ul {
         transform: scale(1.05);
         text-shadow: 0 0 20px rgba(244, 166, 205, 0.8), 0 0 30px rgba(236, 72, 153, 0.6);
     }
-}
-
-/* 💕 Corações Flutuantes */
-.floating-hearts {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.heart {
-    position: absolute;
-    font-size: 20px;
-    color: var(--primary-rose);
-    opacity: 0.8;
-    animation: heartFall linear infinite;
-    pointer-events: none;
-    text-shadow: 0 0 15px rgba(244, 114, 182, 0.6);
-}
-
-.heart:nth-child(odd) {
-    color: var(--lavender);
-    text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
-}
-
-.heart:nth-child(3n) {
-    color: var(--peach);
-    text-shadow: 0 0 15px rgba(251, 113, 133, 0.6);
-}
-
-@keyframes heartFall {
-    0% {
-        transform: translateY(-100vh) rotate(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-/* Variações de tamanho e velocidade - MAIS LENTOS */
-.heart.small {
-    font-size: 16px;
-    animation-duration: 12s;
-}
-
-.heart.medium {
-    font-size: 24px;
-    animation-duration: 10s;
-}
-
-.heart.large {
-    font-size: 32px;
-    animation-duration: 8s;
-}
-
-/* Efeito de brilho nos corações */
-.heart::before {
-    content: '✨';
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    font-size: 0.5em;
-    opacity: 0;
-    animation: sparkle 2s ease-in-out infinite;
-}
-
-@keyframes sparkle {
-    0%, 100% { opacity: 0; transform: scale(0); }
-    50% { opacity: 1; transform: scale(1); }
 }
 
 .logo-letter {
@@ -1423,14 +1318,12 @@ section::before {
     align-items: flex-start;
     gap: var(--space-lg);
     padding: var(--space-xl);
-    background: rgba(244, 114, 182, 0.1);
+    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--blush-pink) 100%);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
     opacity: 0;
     transform: translateY(30px);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
 }
 
 .expertise-item.animate {
@@ -1439,10 +1332,8 @@ section::before {
 }
 
 .expertise-item:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-xl);
 }
 
 .expertise-icon {
@@ -1525,20 +1416,16 @@ section::before {
 }
 
 .service-card {
-    background: rgba(244, 114, 182, 0.1);
+    background: var(--white);
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
 }
 
 .service-card:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-xl);
 }
 
 .service-image {
@@ -1619,26 +1506,6 @@ section::before {
 /* Gallery Section */
 .gallery {
     background: var(--gradient-card);
-}
-
-/* Cards com Rosa Transparente e Bordas Acesas */
-.gallery-item {
-    position: relative;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    cursor: pointer;
-    transition: all var(--transition-base);
-    background: rgba(244, 114, 182, 0.1);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-xl);
 }
 
 .gallery-grid {
@@ -1731,18 +1598,10 @@ section::before {
 }
 
 .testimonial-content {
-    background: rgba(244, 114, 182, 0.1);
+    background: var(--gradient-card);
     padding: var(--space-3xl);
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-lg);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
-    transition: all var(--transition-base);
-}
-
-.testimonial-content:hover {
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-lg);
 }
 
 .stars {
@@ -1832,19 +1691,15 @@ section::before {
     align-items: flex-start;
     gap: var(--space-lg);
     padding: var(--space-xl);
-    background: rgba(244, 114, 182, 0.1);
+    background: var(--white);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border: 2px solid transparent;
-    backdrop-filter: blur(10px);
 }
 
 .contact-card:hover {
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    border: 2px solid var(--primary-rose);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-lg);
 }
 
 .contact-icon {

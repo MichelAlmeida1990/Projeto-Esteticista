@@ -1068,7 +1068,7 @@
             // Adicionar à lista de corações
             this.hearts.push(heart);
             
-            // Remover após animação - AJUSTADO PARA VELOCIDADE MAIS LENTA
+            // Remover após animação
             setTimeout(() => {
                 if (heart.parentNode) {
                     heart.parentNode.removeChild(heart);
@@ -1077,7 +1077,7 @@
                 if (index > -1) {
                     this.hearts.splice(index, 1);
                 }
-            }, 13000); // Tempo baseado na animação mais longa (12s)
+            }, 8000); // Tempo baseado na animação mais longa
         }
         
         cleanupHearts() {

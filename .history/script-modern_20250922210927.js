@@ -1010,128 +1010,12 @@
         }
     }
 
-    // 💕 Sistema de Corações Flutuantes
-    class FloatingHearts {
-        constructor() {
-            this.container = document.getElementById('floatingHearts');
-            this.hearts = [];
-            this.maxHearts = 15;
-            this.heartSymbols = ['💕', '💖', '💗', '💘', '💝', '💞', '💟', '❤️', '🧡', '💛', '💚', '💙', '💜', '🤍', '🖤'];
-            this.sizes = ['small', 'medium', 'large'];
-            this.init();
-        }
-        
-        init() {
-            // Criar corações iniciais
-            this.createInitialHearts();
-            
-            // Gerar novos corações periodicamente - MAIS LENTO
-            setInterval(() => {
-                this.createHeart();
-            }, 4000); // Novo coração a cada 4 segundos
-            
-            // Limpar corações antigos
-            setInterval(() => {
-                this.cleanupHearts();
-            }, 10000); // Limpeza a cada 10 segundos
-        }
-        
-        createInitialHearts() {
-            for (let i = 0; i < 5; i++) {
-                setTimeout(() => {
-                    this.createHeart();
-                }, i * 1000);
-            }
-        }
-        
-        createHeart() {
-            if (this.hearts.length >= this.maxHearts) return;
-            
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            
-            // Escolher símbolo aleatório
-            const symbol = this.heartSymbols[Math.floor(Math.random() * this.heartSymbols.length)];
-            heart.textContent = symbol;
-            
-            // Escolher tamanho aleatório
-            const size = this.sizes[Math.floor(Math.random() * this.sizes.length)];
-            heart.classList.add(size);
-            
-            // Posição horizontal aleatória
-            const leftPosition = Math.random() * 100;
-            heart.style.left = leftPosition + '%';
-            
-            // Adicionar ao container
-            this.container.appendChild(heart);
-            
-            // Adicionar à lista de corações
-            this.hearts.push(heart);
-            
-            // Remover após animação - AJUSTADO PARA VELOCIDADE MAIS LENTA
-            setTimeout(() => {
-                if (heart.parentNode) {
-                    heart.parentNode.removeChild(heart);
-                }
-                const index = this.hearts.indexOf(heart);
-                if (index > -1) {
-                    this.hearts.splice(index, 1);
-                }
-            }, 13000); // Tempo baseado na animação mais longa (12s)
-        }
-        
-        cleanupHearts() {
-            // Remover corações que não estão mais visíveis
-            this.hearts = this.hearts.filter(heart => {
-                if (!heart.parentNode) return false;
-                
-                const rect = heart.getBoundingClientRect();
-                if (rect.top > window.innerHeight) {
-                    heart.parentNode.removeChild(heart);
-                    return false;
-                }
-                return true;
-            });
-        }
-        
-        // Método para pausar/retomar corações
-        pause() {
-            this.hearts.forEach(heart => {
-                heart.style.animationPlayState = 'paused';
-            });
-        }
-        
-        resume() {
-            this.hearts.forEach(heart => {
-                heart.style.animationPlayState = 'running';
-            });
-        }
-    }
-
     // Initialize the application
     new App();
     
     // Initialize letter animator after DOM is loaded
     document.addEventListener('DOMContentLoaded', () => {
         new LetterAnimator();
-    });
-    
-    // Initialize floating hearts after loading screen
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            window.floatingHearts = new FloatingHearts();
-        }, 4000); // Iniciar após o loading screen
-    });
-    
-    // Pausar corações quando a página não está visível (performance)
-    document.addEventListener('visibilitychange', function() {
-        if (window.floatingHearts) {
-            if (document.hidden) {
-                window.floatingHearts.pause();
-            } else {
-                window.floatingHearts.resume();
-            }
-        }
     });
 
 })();
