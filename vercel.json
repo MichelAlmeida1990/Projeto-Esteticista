@@ -3,26 +3,26 @@
   "name": "juliana-daiane-estetica",
   "builds": [
     {
-      "src": "server.js",
+      "src": "api/**/*.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server.js"
+      "dest": "/api/$1"
     },
     {
       "src": "/health",
-      "dest": "/server.js"
+      "dest": "/api/health"
     },
     {
       "src": "/offline",
       "dest": "/index-offline.html"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
     },
     {
       "src": "/(.*)",
@@ -40,11 +40,20 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
+      "source": "/(.*\\.(css|js))",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(png|jpg|jpeg|gif|ico|svg))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
         }
       ]
     },
@@ -70,11 +79,6 @@
       ]
     }
   ],
-  "functions": {
-    "server.js": {
-      "maxDuration": 10
-    }
-  },
   "env": {
     "NODE_ENV": "production"
   }

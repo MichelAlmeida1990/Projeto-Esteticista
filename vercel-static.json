@@ -103,11 +103,6 @@
       ]
     }
   ],
-  "functions": {
-    "api/**/*.js": {
-      "maxDuration": 10
-    }
-  },
   "env": {
     "NODE_ENV": "production"
   }
