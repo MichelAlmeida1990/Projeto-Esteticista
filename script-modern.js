@@ -472,6 +472,47 @@
             if (!elements.contactForm) return;
 
             elements.contactForm.addEventListener('submit', (e) => this.handleSubmit(e));
+            
+            // Add phone mask
+            const phoneInput = elements.contactForm.querySelector('#phone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', (e) => this.formatPhone(e));
+                phoneInput.addEventListener('keydown', (e) => this.handlePhoneKeydown(e));
+            }
+        }
+
+        formatPhone(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length <= 11) {
+                if (value.length <= 2) {
+                    value = value;
+                } else if (value.length <= 6) {
+                    value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+                } else if (value.length <= 10) {
+                    value = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6)}`;
+                } else {
+                    value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+                }
+            }
+            
+            e.target.value = value;
+        }
+
+        handlePhoneKeydown(e) {
+            // Allow backspace, delete, tab, escape, enter
+            if ([8, 9, 27, 13, 46].indexOf(e.keyCode) !== -1 ||
+                // Allow Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+                (e.keyCode === 65 && e.ctrlKey === true) ||
+                (e.keyCode === 67 && e.ctrlKey === true) ||
+                (e.keyCode === 86 && e.ctrlKey === true) ||
+                (e.keyCode === 88 && e.ctrlKey === true)) {
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
         }
 
         handleSubmit(e) {
@@ -490,7 +531,7 @@
 
             // Create WhatsApp message
             const whatsappMessage = this.createWhatsAppMessage(data);
-            const whatsappURL = `https://wa.me/5511999999999?text=${encodeURIComponent(whatsappMessage)}`;
+            const whatsappURL = `https://wa.me/5511988118991?text=${encodeURIComponent(whatsappMessage)}`;
 
             // Open WhatsApp
             window.open(whatsappURL, '_blank');
@@ -505,16 +546,78 @@
         validateForm(data) {
             const errors = [];
 
-            if (!data.name.trim()) errors.push('Nome é obrigatório');
-            if (!data.phone.trim()) errors.push('Telefone é obrigatório');
-            if (!data.service) errors.push('Selecione um serviço');
+            // Nome validation
+            if (!data.name.trim()) {
+                errors.push('Nome é obrigatório');
+            } else if (data.name.trim().length < 2) {
+                errors.push('Nome deve ter pelo menos 2 caracteres');
+            }
+
+            // Phone validation (Brazilian format)
+            if (!data.phone.trim()) {
+                errors.push('Telefone é obrigatório');
+            } else {
+                // Remove all non-numeric characters
+                const phoneNumbers = data.phone.replace(/\D/g, '');
+                if (phoneNumbers.length < 10 || phoneNumbers.length > 11) {
+                    errors.push('Telefone deve ter 10 ou 11 dígitos');
+                }
+            }
+
+            // Service validation
+            if (!data.service) {
+                errors.push('Selecione um serviço');
+            }
 
             if (errors.length > 0) {
-                alert('Por favor, corrija os seguintes erros:\n' + errors.join('\n'));
+                this.showErrorMessage(errors);
                 return false;
             }
 
             return true;
+        }
+
+        showErrorMessage(errors) {
+            // Create error notification
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #dc2626;
+                color: white;
+                padding: 16px 20px;
+                border-radius: 12px;
+                box-shadow: 0 8px 32px rgba(220, 38, 38, 0.3);
+                z-index: 10000;
+                max-width: 350px;
+                font-family: 'Inter', sans-serif;
+                font-size: 14px;
+                line-height: 1.5;
+                animation: slideInRight 0.3s ease;
+            `;
+
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 16px;"></i>
+                    <strong>Corrija os erros:</strong>
+                </div>
+                <ul style="margin: 0; padding-left: 16px;">
+                    ${errors.map(error => `<li>${error}</li>`).join('')}
+                </ul>
+            `;
+
+            document.body.appendChild(notification);
+
+            // Remove after 5 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 5000);
         }
 
         createWhatsAppMessage(data) {
@@ -527,17 +630,24 @@
                 'drenagem-pos': 'Drenagem Pós-Operatório'
             };
 
-            let message = `Olá Juliana! 👋\n\n`;
-            message += `Gostaria de agendar uma consulta:\n\n`;
-            message += `👤 *Nome:* ${data.name}\n`;
-            message += `📱 *Telefone:* ${data.phone}\n`;
-            message += `💆‍♀️ *Serviço:* ${serviceNames[data.service] || data.service}\n`;
+            let message = `🌺 *Olá Juliana!*\n\n`;
+            message += `Vim através do seu site e gostaria de *agendar uma consulta* para tratamento estético domiciliar.\n\n`;
+            message += `📋 *DADOS PARA AGENDAMENTO:*\n\n`;
+            message += `👤 *Nome Completo:* ${data.name}\n`;
+            message += `📱 *Telefone/WhatsApp:* ${data.phone}\n`;
+            message += `💆‍♀️ *Serviço de Interesse:* ${serviceNames[data.service] || data.service}\n`;
+            message += `🏠 *Atendimento:* Domiciliar\n\n`;
 
             if (data.message.trim()) {
-                message += `💬 *Mensagem:* ${data.message}\n`;
+                message += `💬 *Observações/Necessidades Especiais:*\n${data.message}\n\n`;
             }
 
-            message += `\nAguardo seu retorno! 😊`;
+            message += `✅ *Confirmação:*\n`;
+            message += `- Atendimento domiciliar ✓\n`;
+            message += `- Equipamentos profissionais ✓\n`;
+            message += `- Protocolos de segurança ✓\n\n`;
+            message += `Aguardo seu retorno para confirmarmos o melhor horário! 😊\n\n`;
+            message += `_Obrigada pela atenção!_ 💙`;
 
             return message;
         }
@@ -549,17 +659,39 @@
                 position: fixed;
                 top: 20px;
                 right: 20px;
-                background: linear-gradient(135deg, #031f5f 0%, #00afee 100%);
+                background: linear-gradient(135deg, #25d366, #128c7e);
                 color: white;
-                padding: 1rem 1.5rem;
-                border-radius: 0.75rem;
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                padding: 20px 24px;
+                border-radius: 16px;
+                box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
                 z-index: 10000;
-                font-weight: 600;
+                max-width: 380px;
+                font-family: 'Inter', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
                 transform: translateX(100%);
-                transition: transform 0.3s ease-out;
+                transition: transform 0.4s ease-out;
+                border: 2px solid rgba(255, 255, 255, 0.2);
             `;
-            notification.textContent = 'Redirecionando para o WhatsApp...';
+
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                    <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+                    <div>
+                        <strong style="font-size: 16px; display: block;">WhatsApp Aberto!</strong>
+                        <span style="opacity: 0.9; font-size: 12px;">Redirecionamento realizado</span>
+                    </div>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 12px; border-radius: 8px; margin-bottom: 12px;">
+                    ✅ <strong>Próximos passos:</strong><br>
+                    • Sua mensagem foi formatada automaticamente<br>
+                    • Envie a mensagem no WhatsApp<br>
+                    • Juliana retornará para confirmar o agendamento
+                </div>
+                <div style="text-align: center; font-size: 12px; opacity: 0.8;">
+                    💙 <em>Obrigada por escolher nossos serviços!</em>
+                </div>
+            `;
 
             document.body.appendChild(notification);
 
@@ -568,15 +700,15 @@
                 notification.style.transform = 'translateX(0)';
             });
 
-            // Remove after 3 seconds
+            // Remove after 8 seconds
             setTimeout(() => {
                 notification.style.transform = 'translateX(100%)';
                 setTimeout(() => {
                     if (notification.parentNode) {
                         notification.parentNode.removeChild(notification);
                     }
-                }, 300);
-            }, 3000);
+                }, 400);
+            }, 8000);
         }
     }
 

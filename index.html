@@ -2,15 +2,20 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Juliana Daiane - Esteticista especializada há 15 anos em tratamentos faciais e corporais domiciliares. Limpeza de pele, microagulhamento, drenagem linfática e muito mais.">
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
+    <!-- Performance Optimizations -->
+    <meta name="theme-color" content="#1e40af">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
     <title>Juliana Daiane - Estética Premium Domiciliar</title>
     
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="styles-modern.css" as="style">
     <link rel="preload" href="script-modern.js" as="script">
     
     <!-- Preconnect to External Resources -->
@@ -18,10 +23,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&display=swap"></noscript>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Critical Styles -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background: #f0f9ff;
+            background-attachment: fixed;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, 
+                rgba(37, 99, 235, 0.85) 0%, 
+                rgba(30, 64, 175, 0.88) 25%, 
+                rgba(14, 165, 233, 0.82) 50%, 
+                rgba(30, 64, 175, 0.88) 75%, 
+                rgba(37, 99, 235, 0.85) 100%);
+            backdrop-filter: blur(25px);
+            z-index: 1000;
+            height: 80px;
+        }
+        
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #0ea5e9 50%, #0284c7 75%, #0369a1 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+    </style>
     
     <!-- Styles -->
     <link rel="stylesheet" href="styles-modern.css">
@@ -161,7 +211,9 @@
                         <div class="image-container">
                             <img src="assets/image/WhatsApp Image 2025-09-20 at 14.07.38 (1).jpeg" 
                                  alt="Juliana Daiane - Esteticista Especializada" 
-                                 class="hero-img">
+                                 class="hero-img"
+                                 loading="eager"
+                                 decoding="async">
                             <div class="image-overlay">
                                 <div class="floating-card">
                                     <i class="fas fa-star"></i>
@@ -320,7 +372,8 @@
                                 <div class="service-image">
                                     <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=300&fit=crop" 
                                          alt="Limpeza de pele profissional" 
-                                         loading="lazy">
+                                         loading="lazy"
+                                         decoding="async">
                                     <div class="service-overlay">
                                         <i class="fas fa-eye"></i>
                                     </div>
@@ -619,7 +672,7 @@
                             <div class="contact-details">
                                 <h3>WhatsApp</h3>
                                 <p>Resposta rápida e agendamento fácil</p>
-                                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta." 
+                                <a href="https://wa.me/5511988118991?text=Olá! Gostaria de agendar uma consulta." 
                                    class="contact-link" target="_blank">
                                    Chamar no WhatsApp
                                 </a>
@@ -658,8 +711,8 @@
                             
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="phone">Telefone</label>
-                                    <input type="tel" id="phone" name="phone" required>
+                                    <label for="phone">Telefone/WhatsApp</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="service">Serviço de interesse</label>
@@ -756,6 +809,29 @@
         </footer>
     </div>
 
+    <!-- Performance Script -->
+    <script>
+        // Optimize font loading
+        if ('fonts' in document) {
+            document.fonts.ready.then(function() {
+                document.documentElement.classList.add('fonts-loaded');
+            });
+        }
+        
+        // Preload critical images
+        const criticalImages = [
+            'assets/image/WhatsApp Image 2025-09-20 at 14.07.38 (1).jpeg'
+        ];
+        
+        criticalImages.forEach(src => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = src;
+            document.head.appendChild(link);
+        });
+    </script>
+    
     <!-- Scripts -->
     <script src="script-modern.js" defer></script>
 </body>
