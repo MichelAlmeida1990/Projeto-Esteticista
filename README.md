@@ -1,108 +1,120 @@
-# 🌸 Juliana Daiane - Estética Premium
+# 🌺 Juliana Daiane - Estética Premium Domiciliar
 
-Um site moderno e elegante para esteticista especializada em atendimento domiciliar.
+Site profissional para esteticista especializada em tratamentos faciais e corporais domiciliares.
 
-## ✨ Características
+## 🚀 Características
 
-- **Design Responsivo**: Funciona perfeitamente em todos os dispositivos
-- **Glassmorphismo**: Cabeçalho com efeito de vidro lilás
-- **Logo Interativo**: Fonte cursiva com múltiplas animações
-- **Paleta Rosa Delicada**: Cores suaves e femininas
-- **Loading Screen**: 10 segundos com logo animado
-- **Galeria Funcional**: Lightbox moderno para resultados
-- **Formulário WhatsApp**: Integração direta para contato
+- **Design Responsivo**: Otimizado para desktop, tablet e mobile
+- **Sistema de Agendamento**: Integração real com WhatsApp (1198811-8991)
+- **Performance Otimizada**: Carregamento rápido com preload e lazy loading
+- **Validação Avançada**: Formulários com validação em tempo real
+- **Segurança**: Headers de segurança e proteção contra ataques
+- **SEO Otimizado**: Meta tags e estrutura semântica
 
-## 🎨 Tecnologias
+## 🛠️ Tecnologias
 
-- **HTML5**: Estrutura semântica moderna
-- **CSS3**: Animações, gradientes e glassmorphismo
-- **JavaScript**: Interações avançadas e efeitos visuais
-- **Font Awesome**: Ícones profissionais
-- **Google Fonts**: Typography premium (Great Vibes, Inter, Playfair Display)
+- **Frontend**: HTML5, CSS3, JavaScript ES6+
+- **Backend**: Node.js, Express.js
+- **Deploy**: Railway
+- **Fontes**: Google Fonts (Dancing Script, Inter, Playfair Display)
+- **Ícones**: Font Awesome 6.4.0
 
-## 🚀 Funcionalidades
+## 📱 Funcionalidades
 
-### 📱 Interface Moderna
-- Navegação suave com scroll spy
-- Menu mobile responsivo
-- Efeitos de hover e animações
-- Lazy loading para performance
+### Sistema de Agendamento
+- Formulário com validação brasileira
+- Máscara de telefone automática
+- Redirecionamento direto para WhatsApp
+- Mensagem profissional formatada
+- Notificações de sucesso/erro
 
-### 🎭 Logo Cursivo Interativo
-- 5 tipos de animações diferentes
-- Cores que mudam dinamicamente
-- Sparkles automáticos
-- Efeitos de click e hover
+### Design e UX
+- Animações suaves e interativas
+- Efeitos parallax e tilt
+- Loading screen personalizada
+- Galeria de resultados
+- Depoimentos com slider
+- Navegação responsiva
 
-### 💜 Glassmorphismo Premium
-- Cabeçalho com backdrop filter
-- Partículas flutuantes
-- Animações shimmer
-- Cores roxas vibrantes
-
-### 📸 Galeria de Resultados
-- Lightbox moderno
-- Efeitos de zoom
-- Navegação intuitiva
-- Responsivo em todos os dispositivos
-
-## 🌟 Seções
-
-1. **Hero**: Apresentação principal com foto e estatísticas
-2. **Sobre**: Perfil profissional com expertise
-3. **Serviços**: Tabs interativas (Facial/Corporal)
-4. **Galeria**: Resultados com lightbox
-5. **Depoimentos**: Slider automático
-6. **Contato**: Formulário integrado ao WhatsApp
-
-## 📋 Serviços Oferecidos
-
-### 💆‍♀️ Tratamentos Faciais
-- Limpeza de pele
-- Microagulhamento  
-- Peeling Mandélico
-
-### 💃 Tratamentos Corporais
-- Drenagem linfática
-- Drenagem para gestantes
-- Drenagem pós-operatório
-
-## 🎨 Paleta de Cores
-
-- **Primary Rose**: #f4a6cd
-- **Deep Rose**: #ec4899
-- **Dusty Rose**: #be185d
-- **Soft Pink**: #fce7f3
-- **Lavender**: #e879f9
-- **Lilac**: #c084fc
-
-## ⚡ Performance
-
-- Loading screen otimizado
+### Performance
+- Critical CSS inline
 - Lazy loading de imagens
-- Animações 60fps
-- Código minificado
-- SEO otimizado
+- Compressão de assets
+- Cache headers otimizados
+- Preload de recursos críticos
 
-## 📱 Responsividade
+## 🚀 Deploy
 
-- Mobile First
-- Breakpoints: 768px, 480px
-- Touch friendly
-- Gestos otimizados
+### Railway (Recomendado)
 
-## 🔧 Como usar
+1. **Conectar Repositório**:
+   ```bash
+   # Clone o repositório
+   git clone https://github.com/MichelAlmeida1990/Projeto-Esteticista.git
+   cd Projeto-Esteticista
+   ```
 
-1. Abra o arquivo `index.html` no navegador
-2. Navegue pelas seções
-3. Teste as interações do logo
-4. Experimente o formulário de contato
-5. Visualize a galeria de resultados
+2. **Deploy Automático**:
+   - Conecte o repositório GitHub na Railway
+   - O deploy será automático a cada push
+   - Acesse o link fornecido pela Railway
 
-## 👩‍💼 Sobre Juliana Daiane
+### Deploy Local
 
-Esteticista especializada há **15 anos** em tratamentos faciais e corporais. Oferece atendimento domiciliar personalizado com técnicas modernas e cuidado humanizado.
+1. **Instalar Dependências**:
+   ```bash
+   npm install
+   ```
+
+2. **Executar em Desenvolvimento**:
+   ```bash
+   npm run dev
+   ```
+
+3. **Executar em Produção**:
+   ```bash
+   npm start
+   ```
+
+## 📊 Monitoramento
+
+- **Health Check**: `/health`
+- **Analytics**: Logs de contato em `/api/contact`
+- **Performance**: Métricas de uptime e memória
+
+## 🔧 Configuração
+
+### Variáveis de Ambiente
+
+```env
+NODE_ENV=production
+PORT=3000
+```
+
+### Estrutura de Arquivos
+
+```
+├── index.html              # Página principal
+├── index-offline.html      # Página offline
+├── styles-modern.css       # Estilos principais
+├── script-modern.js        # JavaScript principal
+├── server.js              # Servidor Express
+├── package.json           # Configuração Node.js
+├── railway.toml           # Configuração Railway
+├── assets/                # Imagens e recursos
+└── README.md              # Documentação
+```
+
+## 📞 Contato
+
+- **WhatsApp**: (11) 98811-8991
+- **Serviços**: Tratamentos faciais e corporais domiciliares
+- **Especialidades**: Limpeza de pele, microagulhamento, drenagem linfática
+
+## 📝 Licença
+
+MIT License - Projeto desenvolvido para Juliana Daiane Estética.
 
 ---
 
-**Desenvolvido com 💜 para Juliana Daiane Estética**
+**Desenvolvido com 💙 por Michel Almeida**
