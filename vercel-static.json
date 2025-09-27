@@ -1,54 +1,8 @@
 {
   "version": 2,
   "name": "juliana-daiane-estetica-static",
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "index-offline.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "styles-modern.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "script-modern.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "assets/**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/health",
-      "dest": "/api/health"
-    },
-    {
-      "src": "/offline",
-      "dest": "/index-offline.html"
-    },
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -101,6 +55,12 @@
           "value": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://wa.me; frame-src 'none'; object-src 'none';"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/health",
+      "destination": "/api/health"
     }
   ],
   "env": {

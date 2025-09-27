@@ -1,34 +1,8 @@
 {
   "version": 2,
   "name": "juliana-daiane-estetica",
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/health",
-      "dest": "/api/health"
-    },
-    {
-      "src": "/offline",
-      "dest": "/index-offline.html"
-    },
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -77,6 +51,12 @@
           "value": "strict-origin-when-cross-origin"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/health",
+      "destination": "/api/health"
     }
   ],
   "env": {
