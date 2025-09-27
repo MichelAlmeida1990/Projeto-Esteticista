@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "projeto-esteticista-static",
+  "name": "juliana-daiane-estetica-static",
   "builds": [
     {
       "src": "api/**/*.js",

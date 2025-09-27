@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "projeto-esteticista",
+  "name": "juliana-daiane-estetica",
   "builds": [
     {
       "src": "server.js",
