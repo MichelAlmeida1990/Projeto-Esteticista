@@ -2332,10 +2332,13 @@ section::before {
     .services-grid {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
+        justify-items: center;
     }
     
     .service-card {
         margin-bottom: var(--space-md);
+        max-width: 400px;
+        width: 100%;
     }
     
     .service-content {
@@ -2395,10 +2398,13 @@ section::before {
     .contact-content {
         grid-template-columns: 1fr;
         gap: var(--space-xl);
+        justify-items: center;
     }
     
     .contact-card {
         padding: var(--space-lg);
+        max-width: 400px;
+        width: 100%;
     }
     
     .contact-icon {
@@ -2494,6 +2500,12 @@ section::before {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-lg);
+        justify-items: center;
+    }
+    
+    .gallery-item {
+        max-width: 200px;
+        width: 100%;
     }
     
     .contact-content {
@@ -2594,6 +2606,12 @@ section::before {
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: var(--space-md);
+        justify-items: center;
+    }
+    
+    .gallery-item {
+        max-width: 300px;
+        width: 100%;
     }
     
     /* Profile Card Extra Small */
@@ -2651,6 +2669,9 @@ section::before {
         flex-direction: column;
         text-align: center;
         gap: var(--space-md);
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
     }
     
     .contact-icon {
