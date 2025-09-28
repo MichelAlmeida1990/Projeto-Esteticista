@@ -800,24 +800,32 @@ ul {
 
 /* Footer Logo */
 .footer-logo {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: var(--space-lg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 .footer-logo .logo-letter {
     color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all var(--transition-smooth);
 }
 
 .footer-logo .logo-letter.surname {
-    color: var(--primary-rose);
+    color: var(--vivid-azure);
+    text-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
 }
 
 .footer-logo:hover .logo-letter {
-    color: var(--primary-rose);
+    color: var(--vivid-azure);
+    text-shadow: 0 2px 12px rgba(59, 130, 246, 0.6);
+    transform: scale(1.05);
 }
 
 .footer-logo:hover .logo-letter.surname {
-    color: var(--lavender);
+    color: var(--primary-blue);
+    text-shadow: 0 2px 12px rgba(37, 99, 235, 0.6);
+    transform: scale(1.05);
 }
 
 .nav-menu {
@@ -2015,9 +2023,25 @@ section::before {
 
 /* Footer */
 .footer {
-    background: var(--gray-900);
-    color: var(--gray-300);
+    background: linear-gradient(135deg, var(--dark-navy) 0%, var(--navy-blue) 50%, var(--primary-blue) 100%);
+    color: var(--white);
     padding: var(--space-4xl) 0 var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(29, 78, 216, 0.05) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .footer-content {
@@ -2025,6 +2049,8 @@ section::before {
     grid-template-columns: 1fr 2fr;
     gap: var(--space-4xl);
     margin-bottom: var(--space-3xl);
+    position: relative;
+    z-index: 1;
 }
 
 .footer-brand .logo-container {
@@ -2036,11 +2062,12 @@ section::before {
 
 .footer-brand p {
     font-family: 'Dancing Script', cursive;
-    color: var(--gray-400);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.7;
-    font-size: 1.1rem;
-    font-weight: 400;
-    letter-spacing: 0.3px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .footer-links {
@@ -2052,10 +2079,23 @@ section::before {
 .footer-column h4 {
     font-family: 'Dancing Script', cursive;
     color: var(--white);
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: var(--space-lg);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--vivid-azure), var(--primary-blue));
+    border-radius: 1px;
 }
 
 .footer-column ul {
@@ -2066,38 +2106,63 @@ section::before {
 
 .footer-column a {
     font-family: 'Dancing Script', cursive;
-    color: var(--gray-400);
-    transition: color var(--transition-fast);
+    color: rgba(255, 255, 255, 0.7);
+    transition: all var(--transition-smooth);
     font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: 0.3px;
+    position: relative;
+    padding: 4px 0;
 }
 
 .footer-column a:hover {
-    color: var(--navy-hover);
+    color: var(--vivid-azure);
+    transform: translateX(4px);
+    text-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
 }
 
 .footer-column li {
-    color: var(--gray-400);
+    color: rgba(255, 255, 255, 0.7);
     display: flex;
     align-items: center;
     gap: var(--space-sm);
+    transition: all var(--transition-smooth);
+    padding: 2px 0;
+}
+
+.footer-column li:hover {
+    color: var(--vivid-azure);
+    transform: translateX(2px);
 }
 
 .footer-column i {
-    color: var(--navy-hover);
+    color: var(--vivid-azure);
     width: 16px;
+    font-size: 1.1rem;
+    transition: all var(--transition-smooth);
+}
+
+.footer-column li:hover i {
+    color: var(--primary-blue);
+    transform: scale(1.1);
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--gray-700);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: var(--space-xl);
     text-align: center;
-    color: var(--gray-500);
+    color: rgba(255, 255, 255, 0.6);
     font-family: 'Dancing Script', cursive;
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.3px;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Lightbox */
