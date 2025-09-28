@@ -371,7 +371,7 @@
             openLightbox(
                 profileImage.src, 
                 profileImage.alt,
-                'Juliana Dayane',
+                'Juliana Daiane',
                 'Esteticista com 15 anos de experiência especializada em atendimento domiciliar'
             );
         });

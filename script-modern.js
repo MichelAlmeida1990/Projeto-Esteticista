@@ -316,7 +316,7 @@
 
         openProfileLightbox(img) {
             const isMainProfile = img.src.includes('14.07.38.jpeg');
-            const title = 'Juliana Dayane';
+            const title = 'Juliana Daiane';
             const description = isMainProfile ? 
                 'Esteticista especializada há 15 anos em atendimento domiciliar' : 
                 'Profissional dedicada ao cuidado e bem-estar das clientes';
