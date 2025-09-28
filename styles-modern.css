@@ -490,9 +490,9 @@ ul {
     height: 1px;
     background: linear-gradient(90deg, 
         transparent 0%, 
-        rgba(192, 132, 252, 0.5) 20%, 
-        rgba(233, 213, 255, 0.8) 50%, 
-        rgba(192, 132, 252, 0.5) 80%, 
+        rgba(44, 44, 44, 0.5) 20%, 
+        rgba(44, 44, 44, 0.8) 50%, 
+        rgba(44, 44, 44, 0.5) 80%, 
         transparent 100%);
     animation: topGlow 6s ease-in-out infinite;
 }
@@ -604,11 +604,11 @@ ul {
 @keyframes logoGlow {
     0%, 100% {
         transform: scale(1);
-        text-shadow: 0 0 10px rgba(244, 166, 205, 0.5);
+        text-shadow: 0 0 10px rgba(44, 44, 44, 0.5);
     }
     50% {
         transform: scale(1.05);
-        text-shadow: 0 0 20px rgba(244, 166, 205, 0.8), 0 0 30px rgba(236, 72, 153, 0.6);
+        text-shadow: 0 0 20px rgba(44, 44, 44, 0.8), 0 0 30px rgba(44, 44, 44, 0.6);
     }
 }
 
@@ -641,7 +641,7 @@ ul {
 
 .heart:nth-child(3n) {
     color: var(--warm-beige);
-    text-shadow: 0 0 15px rgba(251, 113, 133, 0.6);
+    text-shadow: 0 0 15px rgba(44, 44, 44, 0.6);
 }
 
 @keyframes heartFall {
@@ -692,7 +692,7 @@ ul {
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--terracotta-light);
-    text-shadow: 0 2px 4px rgba(190, 24, 93, 0.1);
+    text-shadow: 0 2px 4px rgba(44, 44, 44, 0.1);
 }
 
 .logo-letter.surname {
@@ -813,7 +813,7 @@ ul {
 
 .footer-logo .logo-letter.surname {
     color: var(--vivid-beige);
-    text-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+    text-shadow: 0 2px 8px rgba(44, 44, 44, 0.4);
 }
 
 .footer-logo:hover .logo-letter {
@@ -922,7 +922,7 @@ ul {
 
 .hero-title:hover {
     transform: translateY(-5px);
-    text-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+    text-shadow: 0 10px 20px rgba(44, 44, 44, 0.3);
 }
 
 .title-main {
@@ -2118,7 +2118,7 @@ section::before {
 .footer-column a:hover {
     color: var(--vivid-beige);
     transform: translateX(4px);
-    text-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+    text-shadow: 0 2px 8px rgba(44, 44, 44, 0.4);
 }
 
 .footer-column li {
