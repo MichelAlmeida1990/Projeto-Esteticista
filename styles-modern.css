@@ -1,34 +1,34 @@
 /* Modern CSS Variables - Paleta Terrosa Elegante */
 :root {
     /* Paleta Principal - Tons Terrosos e Neutros */
-    --primary-rose: #dcd3b9;      /* Cor principal - Beige Terroso */
-    --soft-pink: #f7f5f0;         /* Creme Suave */
-    --blush-pink: #ede8dc;        /* Beige Claro */
-    --rose-pink: #c4b5a0;         /* Beige Médio */
-    --deep-rose: #b8a082;         /* Beige Escuro */
-    --dusty-rose: #a68b5b;        /* Terracotta Claro */
-    --cream: #f7f5f0;             /* Creme */
-    --pearl: #ede8dc;             /* Pérola */
+    --primary-terracotta: #dcd3b9;    /* Cor principal - Beige Terroso */
+    --soft-cream: #f7f5f0;            /* Creme Suave */
+    --light-beige: #ede8dc;           /* Beige Claro */
+    --medium-beige: #c4b5a0;          /* Beige Médio */
+    --deep-beige: #b8a082;            /* Beige Escuro */
+    --terracotta-light: #a68b5b;      /* Terracotta Claro */
+    --cream: #f7f5f0;                 /* Creme */
+    --pearl: #ede8dc;                 /* Pérola */
     --white: #ffffff;
-    --black: #3a3328;             /* Marrom Escuro */
+    --black: #3a3328;                 /* Marrom Escuro */
     
     /* Tons Complementares Terrosos */
-    --lavender: #8b7355;          /* Terracotta Médio */
-    --peach: #c4b5a0;             /* Beige Quente */
-    --coral: #a68b5b;             /* Terracotta */
-    --mauve: #6b5b47;             /* Marrom Terroso */
-    --champagne: #dcd3b9;         /* Champagne */
-    --lilac: #8b7355;             /* Lilás Terroso */
-    --light-lilac: #ede8dc;       /* Lilás Claro */
-    --soft-lilac: #f7f5f0;        /* Lilás Suave */
+    --terracotta-medium: #8b7355;     /* Terracotta Médio */
+    --warm-beige: #c4b5a0;            /* Beige Quente */
+    --terracotta: #a68b5b;            /* Terracotta */
+    --earthy-brown: #6b5b47;          /* Marrom Terroso */
+    --champagne: #dcd3b9;             /* Champagne */
+    --terracotta-dark: #8b7355;       /* Terracotta Escuro */
+    --light-terracotta: #ede8dc;      /* Terracotta Claro */
+    --soft-terracotta: #f7f5f0;       /* Terracotta Suave */
     
     /* Tons Terrosos Complementares */
-    --primary-blue: #a68b5b;      /* Terracotta Principal */
-    --vivid-azure: #b8a082;       /* Beige Vívido */
-    --royal-blue: #8b7355;        /* Terracotta Real */
-    --navy-blue: #6b5b47;         /* Marrom Terroso */
-    --dark-navy: #5a4a3a;         /* Marrom Escuro */
-    --navy-hover: #8b7355;        /* Hover Terroso */
+    --primary-accent: #a68b5b;        /* Terracotta Principal */
+    --vivid-beige: #b8a082;           /* Beige Vívido */
+    --royal-terracotta: #8b7355;      /* Terracotta Real */
+    --dark-brown: #6b5b47;            /* Marrom Terroso */
+    --deep-brown: #5a4a3a;            /* Marrom Escuro */
+    --hover-terracotta: #8b7355;      /* Hover Terroso */
     
     /* Tons Neutros Terrosos */
     --slate-50: #f7f5f0;          /* Creme Muito Claro */
@@ -55,12 +55,12 @@
     --gray-900: #3a3328;          /* Marrom Muito Escuro */
     
     /* Gradientes Terrosos Elegantes */
-    --gradient-primary: linear-gradient(135deg, var(--primary-rose) 0%, var(--deep-rose) 100%);
-    --gradient-accent: linear-gradient(135deg, var(--navy-blue) 0%, var(--primary-rose) 100%);
-    --gradient-hero: linear-gradient(135deg, var(--cream) 0%, var(--soft-pink) 100%);
+    --gradient-primary: linear-gradient(135deg, var(--primary-terracotta) 0%, var(--deep-beige) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-terracotta) 100%);
+    --gradient-hero: linear-gradient(135deg, var(--cream) 0%, var(--soft-cream) 100%);
     --gradient-card: linear-gradient(135deg, var(--white) 0%, var(--pearl) 100%);
-    --gradient-dark: linear-gradient(135deg, var(--black) 0%, var(--dusty-rose) 100%);
-    --gradient-light: linear-gradient(135deg, var(--pearl) 0%, var(--soft-pink) 100%);
+    --gradient-dark: linear-gradient(135deg, var(--black) 0%, var(--terracotta-light) 100%);
+    --gradient-light: linear-gradient(135deg, var(--pearl) 0%, var(--soft-cream) 100%);
     --gradient-loading: linear-gradient(135deg, #f7f5f0 0%, #ede8dc 25%, #dcd3b9 50%, #c4b5a0 75%, #a68b5b 100%);
     
     /* Animação do gradiente de carregamento */
@@ -142,8 +142,8 @@ body {
     font-family: var(--font-primary);
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--dusty-rose);
-    background: linear-gradient(135deg, var(--cream) 0%, var(--soft-pink) 20%, var(--pearl) 40%, var(--white) 60%, var(--blush-pink) 80%, var(--soft-pink) 100%);
+    color: var(--terracotta-light);
+    background: linear-gradient(135deg, var(--cream) 0%, var(--soft-cream) 20%, var(--pearl) 40%, var(--white) 60%, var(--light-beige) 80%, var(--soft-cream) 100%);
     background-attachment: fixed;
     background-size: 400% 400%;
     animation: roseGradientShift 20s ease infinite;
@@ -237,13 +237,13 @@ ul {
     display: inline-block;
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--dusty-rose);
+    color: var(--terracotta-light);
     text-shadow: 0 3px 10px rgba(3, 105, 161, 0.2);
     animation: loadingLetterWave 3s ease-in-out infinite;
 }
 
 .loading-letter.surname {
-    color: var(--primary-rose);
+    color: var(--primary-terracotta);
     font-style: italic;
     margin-left: 0.1em;
         text-shadow: 0 3px 10px rgba(30, 64, 175, 0.2);
@@ -298,28 +298,28 @@ ul {
 @keyframes loadingLetterWave {
     0%, 100% {
         transform: translateY(0px) scale(1);
-        color: var(--dusty-rose);
+        color: var(--terracotta-light);
     }
     25% {
         transform: translateY(-5px) scale(1.05);
-        color: var(--deep-rose);
+        color: var(--deep-beige);
         text-shadow: 0 5px 15px rgba(2, 132, 199, 0.4);
     }
     50% {
         transform: translateY(-8px) scale(1.1);
-        color: var(--primary-rose);
+        color: var(--primary-terracotta);
         text-shadow: 0 8px 20px rgba(30, 64, 175, 0.5);
     }
     75% {
         transform: translateY(-3px) scale(1.02);
-        color: var(--lavender);
+        color: var(--terracotta-medium);
         text-shadow: 0 5px 15px rgba(232, 121, 249, 0.4);
     }
 }
 
 @keyframes loadingLetterWave .surname {
     50% {
-        color: var(--lavender) !important;
+        color: var(--terracotta-medium) !important;
         text-shadow: 0 8px 20px rgba(232, 121, 249, 0.5);
     }
 }
@@ -627,7 +627,7 @@ ul {
 .heart {
     position: absolute;
     font-size: 20px;
-    color: var(--primary-rose);
+    color: var(--primary-terracotta);
     opacity: 0.8;
     animation: heartFall linear infinite;
     pointer-events: none;
@@ -635,12 +635,12 @@ ul {
 }
 
 .heart:nth-child(odd) {
-    color: var(--lavender);
+    color: var(--terracotta-medium);
     text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
 }
 
 .heart:nth-child(3n) {
-    color: var(--peach);
+    color: var(--warm-beige);
     text-shadow: 0 0 15px rgba(251, 113, 133, 0.6);
 }
 
@@ -691,12 +691,12 @@ ul {
     display: inline-block;
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--dusty-rose);
+    color: var(--terracotta-light);
     text-shadow: 0 2px 4px rgba(190, 24, 93, 0.1);
 }
 
 .logo-letter.surname {
-    color: var(--primary-rose);
+    color: var(--primary-terracotta);
     font-style: italic;
     margin-left: 0.1em;
 }
@@ -711,14 +711,14 @@ ul {
 }
 
 .logo-letter:hover {
-    color: var(--deep-rose) !important;
+    color: var(--deep-beige) !important;
     transform: translateY(-5px) scale(1.2) rotate(5deg) !important;
     text-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
     z-index: 10;
 }
 
 .logo-letter.surname:hover {
-    color: var(--lavender) !important;
+    color: var(--terracotta-medium) !important;
     transform: translateY(-5px) scale(1.2) rotate(-5deg) !important;
     text-shadow: 0 5px 15px rgba(232, 121, 249, 0.4);
 }
@@ -744,30 +744,30 @@ ul {
 
 @keyframes colorWave {
     0% {
-        color: var(--dusty-rose);
+        color: var(--terracotta-light);
         transform: translateY(0) scale(1);
     }
     50% {
-        color: var(--deep-rose);
+        color: var(--deep-beige);
         transform: translateY(-3px) scale(1.1);
         text-shadow: 0 3px 10px rgba(2, 132, 199, 0.5);
     }
     100% {
-        color: var(--dusty-rose);
+        color: var(--terracotta-light);
         transform: translateY(0) scale(1);
     }
 }
 
 @keyframes colorWave .surname {
     50% {
-        color: var(--lavender) !important;
+        color: var(--terracotta-medium) !important;
         text-shadow: 0 3px 10px rgba(232, 121, 249, 0.5);
     }
 }
 
 /* Gradient Text Effect */
 .cursive-logo.gradient-text .logo-letter {
-    background: linear-gradient(45deg, var(--primary-rose), var(--deep-rose), var(--lavender), var(--coral));
+    background: linear-gradient(45deg, var(--primary-terracotta), var(--deep-beige), var(--terracotta-medium), var(--terracotta));
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -812,18 +812,18 @@ ul {
 }
 
 .footer-logo .logo-letter.surname {
-    color: var(--vivid-azure);
+    color: var(--vivid-beige);
     text-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
 }
 
 .footer-logo:hover .logo-letter {
-    color: var(--vivid-azure);
+    color: var(--vivid-beige);
     text-shadow: 0 2px 12px rgba(59, 130, 246, 0.6);
     transform: scale(1.05);
 }
 
 .footer-logo:hover .logo-letter.surname {
-    color: var(--primary-blue);
+    color: var(--primary-accent);
     text-shadow: 0 2px 12px rgba(37, 99, 235, 0.6);
     transform: scale(1.05);
 }
@@ -851,13 +851,13 @@ ul {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--navy-hover);
+    background: var(--hover-terracotta);
     transition: width var(--transition-base);
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--navy-hover);
+    color: var(--hover-terracotta);
 }
 
 .nav-link:hover::after,
@@ -927,7 +927,7 @@ ul {
 
 .title-main {
     display: block;
-    color: var(--dusty-rose);
+    color: var(--terracotta-light);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -949,13 +949,13 @@ ul {
 }
 
 .title-main:hover {
-    color: var(--deep-rose);
+    color: var(--deep-beige);
     transform: scale(1.05);
 }
 
 .title-sub {
     display: block;
-    color: var(--primary-rose);
+    color: var(--primary-terracotta);
     font-style: italic;
     font-size: 0.8em;
     transition: all 0.3s ease;
@@ -971,7 +971,7 @@ ul {
 
 .letter:hover {
     transform: scale(1.2) rotate(5deg);
-    color: var(--lavender);
+    color: var(--terracotta-medium);
     text-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
 }
 
@@ -1078,7 +1078,7 @@ ul {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--deep-rose);
+    color: var(--deep-beige);
     font-family: var(--font-display);
 }
 
@@ -1110,7 +1110,7 @@ ul {
     height: 600px;
     object-fit: contain;
     object-position: center center;
-    background: linear-gradient(135deg, var(--cream) 0%, var(--soft-pink) 100%);
+    background: linear-gradient(135deg, var(--cream) 0%, var(--soft-cream) 100%);
 }
 
 .image-overlay {
@@ -1140,7 +1140,7 @@ ul {
 }
 
 .floating-card i {
-    color: var(--navy-hover);
+    color: var(--hover-terracotta);
     font-size: 1.2rem;
     text-shadow: 0 2px 4px rgba(30, 64, 175, 0.3);
 }
@@ -1205,7 +1205,7 @@ ul {
 .shape-1 {
     width: 80px;
     height: 80px;
-    background: var(--vivid-azure);
+    background: var(--vivid-beige);
     top: 20%;
     left: 10%;
     animation-delay: 0s;
@@ -1266,21 +1266,21 @@ ul {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    background: var(--navy-hover);
+    background: var(--hover-terracotta);
     color: var(--white);
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--primary-blue);
-    border-color: var(--primary-blue);
+    color: var(--primary-accent);
+    border-color: var(--primary-accent);
 }
 
 .btn-outline:hover {
-    background: var(--navy-hover);
+    background: var(--hover-terracotta);
     color: var(--white);
     transform: translateY(-2px);
-    border-color: var(--navy-hover);
+    border-color: var(--hover-terracotta);
 }
 
 /* Section Styles */
@@ -1309,7 +1309,7 @@ section::before {
     font-family: var(--font-display);
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 600;
-    color: var(--primary-blue);
+    color: var(--primary-accent);
     margin-bottom: var(--space-md);
 }
 
@@ -1335,7 +1335,7 @@ section::before {
 .about-text h3 {
     font-family: 'Dancing Script', cursive;
     font-size: 2.2rem;
-    color: var(--primary-blue);
+    color: var(--primary-accent);
     margin-bottom: var(--space-lg);
     font-weight: 500;
     letter-spacing: 1px;
@@ -1375,7 +1375,7 @@ section::before {
 }
 
 .expertise-item i {
-    color: var(--navy-hover);
+    color: var(--hover-terracotta);
     font-size: 1.25rem;
 }
 
@@ -1495,7 +1495,7 @@ section::before {
 .expertise-item:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--navy-hover);
+    border: 2px solid var(--hover-terracotta);
     box-shadow: 0 0 20px rgba(30, 64, 175, 0.4), var(--shadow-xl);
 }
 
@@ -1530,7 +1530,7 @@ section::before {
 }
 
 .expertise-content h4 {
-    color: var(--primary-blue);
+    color: var(--primary-accent);
     font-weight: 600;
     font-size: 1.1rem;
     margin-bottom: var(--space-sm);
@@ -1603,7 +1603,7 @@ section::before {
 .service-card:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--navy-hover);
+    border: 2px solid var(--hover-terracotta);
     box-shadow: 0 0 20px rgba(30, 64, 175, 0.4), var(--shadow-xl);
 }
 
@@ -1646,7 +1646,7 @@ section::before {
 }
 
 .service-overlay i {
-    color: var(--navy-hover);
+    color: var(--hover-terracotta);
     font-size: 1.5rem;
 }
 
@@ -1657,7 +1657,7 @@ section::before {
 .service-content h3 {
     font-family: 'Dancing Script', cursive;
     font-size: 1.6rem;
-    color: var(--primary-blue);
+    color: var(--primary-accent);
     margin-bottom: var(--space-md);
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -1709,7 +1709,7 @@ section::before {
 .gallery-item:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-rose);
+    border: 2px solid var(--primary-terracotta);
     box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-xl);
 }
 
@@ -1813,7 +1813,7 @@ section::before {
 }
 
 .testimonial-content:hover {
-    border: 2px solid var(--navy-hover);
+    border: 2px solid var(--hover-terracotta);
     box-shadow: 0 0 20px rgba(30, 64, 175, 0.4), var(--shadow-lg);
 }
 
@@ -1854,7 +1854,7 @@ section::before {
 }
 
 .author-info h4 {
-    color: var(--primary-blue);
+    color: var(--primary-accent);
     font-weight: 600;
     margin-bottom: var(--space-xs);
 }
@@ -1880,7 +1880,7 @@ section::before {
 
 .nav-dot.active,
 .nav-dot:hover {
-    background: var(--navy-hover);
+    background: var(--hover-terracotta);
     transform: scale(1.2);
 }
 
@@ -1917,7 +1917,7 @@ section::before {
 .contact-card:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow-lg);
-    border: 2px solid var(--navy-hover);
+    border: 2px solid var(--hover-terracotta);
     box-shadow: 0 0 20px rgba(30, 64, 175, 0.4), var(--shadow-lg);
 }
 
@@ -1939,7 +1939,7 @@ section::before {
 
 .contact-details h3 {
     font-family: 'Dancing Script', cursive;
-    color: var(--primary-blue);
+    color: var(--primary-accent);
     font-weight: 500;
     margin-bottom: var(--space-sm);
     font-size: 1.4rem;
@@ -1956,13 +1956,13 @@ section::before {
 }
 
 .contact-link {
-    color: var(--navy-hover);
+    color: var(--hover-terracotta);
     font-weight: 600;
     transition: color var(--transition-fast);
 }
 
 .contact-link:hover {
-    color: var(--navy-hover);
+    color: var(--hover-terracotta);
 }
 
 /* Form Styles */
@@ -2012,7 +2012,7 @@ section::before {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--navy-hover);
+    border-color: var(--hover-terracotta);
     box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
 }
 
@@ -2023,7 +2023,7 @@ section::before {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, var(--dark-navy) 0%, var(--navy-blue) 50%, var(--primary-blue) 100%);
+    background: linear-gradient(135deg, var(--deep-brown) 0%, var(--dark-brown) 50%, var(--primary-accent) 100%);
     color: var(--white);
     padding: var(--space-4xl) 0 var(--space-xl);
     position: relative;
@@ -2094,7 +2094,7 @@ section::before {
     left: 0;
     width: 40px;
     height: 2px;
-    background: linear-gradient(90deg, var(--vivid-azure), var(--primary-blue));
+    background: linear-gradient(90deg, var(--vivid-beige), var(--primary-accent));
     border-radius: 1px;
 }
 
@@ -2116,7 +2116,7 @@ section::before {
 }
 
 .footer-column a:hover {
-    color: var(--vivid-azure);
+    color: var(--vivid-beige);
     transform: translateX(4px);
     text-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
 }
@@ -2131,19 +2131,19 @@ section::before {
 }
 
 .footer-column li:hover {
-    color: var(--vivid-azure);
+    color: var(--vivid-beige);
     transform: translateX(2px);
 }
 
 .footer-column i {
-    color: var(--vivid-azure);
+    color: var(--vivid-beige);
     width: 16px;
     font-size: 1.1rem;
     transition: all var(--transition-smooth);
 }
 
 .footer-column li:hover i {
-    color: var(--primary-blue);
+    color: var(--primary-accent);
     transform: scale(1.1);
 }
 
@@ -2873,6 +2873,6 @@ a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 2px solid var(--navy-hover);
+    outline: 2px solid var(--hover-terracotta);
     outline-offset: 2px;
 }
