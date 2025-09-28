@@ -86,8 +86,8 @@
             letters.forEach((letter, index) => {
                 setTimeout(() => {
                     letter.style.transform = 'translateY(-8px) scale(1.15)';
-                    letter.style.color = this.getRandomPinkColor();
-                    letter.style.textShadow = `0 8px 20px ${this.getRandomPinkColor()}60`;
+                    letter.style.color = '#A57964';
+                    letter.style.textShadow = '0 8px 20px rgba(165, 121, 100, 0.6)';
                     
                     setTimeout(() => {
                         letter.style.transform = '';
@@ -103,9 +103,9 @@
             
             letters.forEach((letter, index) => {
                 setTimeout(() => {
-                    letter.style.color = this.getRandomPinkColor();
+                    letter.style.color = '#A57964';
                     letter.style.transform = 'translateY(-10px) scale(1.2) rotate(5deg)';
-                    letter.style.textShadow = `0 10px 25px ${this.getRandomPinkColor()}70`;
+                    letter.style.textShadow = '0 10px 25px rgba(165, 121, 100, 0.7)';
                     
                     setTimeout(() => {
                         letter.style.color = '';
@@ -120,9 +120,9 @@
             const letters = logo.querySelectorAll('.loading-letter');
             const randomLetter = letters[Math.floor(Math.random() * letters.length)];
             
-            randomLetter.style.color = this.getRandomPinkColor();
+            randomLetter.style.color = '#A57964';
             randomLetter.style.transform = 'translateY(-12px) scale(1.3) rotate(10deg)';
-            randomLetter.style.textShadow = `0 12px 30px ${this.getRandomPinkColor()}80`;
+            randomLetter.style.textShadow = '0 12px 30px rgba(165, 121, 100, 0.8)';
             
             setTimeout(() => {
                 randomLetter.style.color = '';
@@ -131,18 +131,6 @@
             }, 1200);
         }
         
-        getRandomPinkColor() {
-            const pinkColors = [
-                '#f4a6cd', // primary-rose
-                '#ec4899', // deep-rose
-                '#be185d', // dusty-rose
-                '#e879f9', // lavender
-                '#fca5a5', // coral
-                '#f9a8d4', // rose-pink
-                '#d8b4fe'  // mauve
-            ];
-            return pinkColors[Math.floor(Math.random() * pinkColors.length)];
-        }
 
         hide() {
             if (elements.loadingScreen) {
@@ -996,14 +984,15 @@
             });
         }
 
+
         startColorWave(logo) {
             const letters = logo.querySelectorAll('.logo-letter');
             
             letters.forEach((letter, index) => {
                 setTimeout(() => {
-                    letter.style.color = this.getRandomPinkColor();
+                    letter.style.color = '#A57964';
                     letter.style.transform = 'translateY(-2px) scale(1.05)';
-                    letter.style.textShadow = `0 3px 10px ${this.getRandomPinkColor()}40`;
+                    letter.style.textShadow = '0 3px 10px rgba(165, 121, 100, 0.4)';
                     
                     setTimeout(() => {
                         letter.style.color = '';
@@ -1018,9 +1007,9 @@
             const letters = logo.querySelectorAll('.logo-letter');
             const randomLetter = letters[Math.floor(Math.random() * letters.length)];
             
-            randomLetter.style.color = this.getRandomPinkColor();
+            randomLetter.style.color = '#A57964';
             randomLetter.style.transform = 'translateY(-5px) scale(1.2) rotate(10deg)';
-            randomLetter.style.textShadow = `0 5px 15px ${this.getRandomPinkColor()}60`;
+            randomLetter.style.textShadow = '0 5px 15px rgba(165, 121, 100, 0.6)';
             
             setTimeout(() => {
                 randomLetter.style.color = '';
@@ -1029,18 +1018,6 @@
             }, 1000);
         }
 
-        getRandomPinkColor() {
-            const pinkColors = [
-                '#f4a6cd', // primary-rose
-                '#ec4899', // deep-rose
-                '#be185d', // dusty-rose
-                '#e879f9', // lavender
-                '#fca5a5', // coral
-                '#f9a8d4', // rose-pink
-                '#d8b4fe'  // mauve
-            ];
-            return pinkColors[Math.floor(Math.random() * pinkColors.length)];
-        }
     }
 
     // Main Application Controller

@@ -1,67 +1,68 @@
-/* Modern CSS Variables - Paleta Terrosa Elegante */
+/* Modern CSS Variables - Paleta Marrom Elegante */
 :root {
-    /* Paleta Principal - Elegante e Sofisticada */
-    --primary-terracotta: #A8A28A;    /* Cor Principal - Beige Cinza */
-    --soft-cream: #f8f6f0;            /* Creme Elegante */
-    --light-beige: #f0ede4;           /* Beige Claro */
-    --medium-beige: #e6e0d6;          /* Beige Médio */
-    --deep-beige: #d4c5a9;            /* Beige Dourado */
-    --terracotta-light: #c9b882;      /* Dourado Suave */
-    --cream: #f8f6f0;                 /* Creme */
-    --pearl: #f0ede4;                 /* Pérola */
+    /* Paleta Principal - Marrom e Bege Elegante */
+    --primary-brown: #A57964;         /* Marrom Principal para texto */
+    --dark-brown: #8B5A3C;            /* Marrom mais forte para hover */
+    --soft-cream: #F6ECDD;            /* Bege para fundos */
+    --light-beige: #F6ECDD;           /* Bege Claro */
+    --medium-beige: #F6ECDD;          /* Bege Médio */
+    --deep-beige: #F6ECDD;            /* Bege para fundos */
+    --terracotta-light: #A57964;      /* Marrom para texto */
+    --cream: #F6ECDD;                 /* Creme para fundos */
+    --pearl: #F6ECDD;                 /* Pérola para fundos */
     --white: #ffffff;
-    --black: #2c2c2c;                 /* Preto Suave */
+    --black: #A57964;                 /* Marrom para texto escuro */
     
     /* Tons Complementares Elegantes */
-    --terracotta-medium: #b8860b;     /* Dourado Escuro */
-    --warm-beige: #e6e0d6;            /* Beige Quente */
-    --terracotta: #d4af37;            /* Dourado */
-    --earthy-brown: #8b7355;          /* Marrom Elegante */
-    --champagne: #d4af37;             /* Champagne Dourado */
-    --terracotta-dark: #b8860b;       /* Dourado Escuro */
-    --light-terracotta: #f0ede4;      /* Dourado Claro */
-    --soft-terracotta: #f8f6f0;       /* Dourado Suave */
+    --terracotta-medium: #A57964;     /* Marrom para destaques */
+    --warm-beige: #F6ECDD;            /* Bege para fundos */
+    --terracotta: #A57964;            /* Marrom para texto */
+    --earthy-brown: #A57964;          /* Marrom para texto */
+    --champagne: #A57964;             /* Marrom para destaques */
+    --terracotta-dark: #A57964;       /* Marrom escuro */
+    --light-terracotta: #F6ECDD;      /* Bege para fundos */
+    --soft-terracotta: #F6ECDD;       /* Bege para fundos */
     
     /* Tons Elegantes Complementares */
-    --primary-accent: #d4af37;        /* Dourado Principal */
-    --vivid-beige: #e6e0d6;           /* Beige Vívido */
-    --royal-terracotta: #b8860b;      /* Dourado Real */
-    --dark-brown: #8b7355;            /* Marrom Elegante */
-    --deep-brown: #5d4e37;            /* Marrom Escuro */
-    --hover-terracotta: #b8860b;      /* Hover Dourado */
+    --primary-accent: #A57964;        /* Marrom Principal */
+    --vivid-beige: #F6ECDD;           /* Bege para fundos */
+    --royal-terracotta: #A57964;      /* Marrom para destaques */
+    --dark-brown: #A57964;            /* Marrom para texto */
+    --deep-brown: #A57964;            /* Marrom escuro */
+    --hover-terracotta: #A57964;      /* Hover Marrom */
     
     /* Tons Neutros Elegantes */
-    --slate-50: #f8f6f0;          /* Creme Muito Claro */
-    --slate-100: #f0ede4;         /* Creme Claro */
-    --slate-200: #e6e0d6;         /* Beige Claro */
-    --slate-300: #d4c5a9;         /* Beige Médio */
-    --slate-400: #c9b882;         /* Dourado Suave */
-    --slate-500: #b8860b;         /* Dourado */
-    --slate-600: #8b7355;         /* Marrom Claro */
-    --slate-700: #5d4e37;         /* Marrom Médio */
-    --slate-800: #3a3328;         /* Marrom Escuro */
-    --slate-900: #2c2c2c;         /* Preto Suave */
+    --slate-50: #F6ECDD;          /* Bege para fundos */
+    --slate-100: #F6ECDD;         /* Bege para fundos */
+    --slate-200: #F6ECDD;         /* Bege para fundos */
+    --slate-300: #F6ECDD;         /* Bege para fundos */
+    --slate-400: #A57964;         /* Marrom para texto */
+    --slate-500: #A57964;         /* Marrom para texto */
+    --slate-600: #A57964;         /* Marrom para texto */
+    --slate-700: #A57964;         /* Marrom para texto */
+    --slate-800: #A57964;         /* Marrom para texto */
+    --slate-900: #A57964;         /* Marrom para texto */
     
     /* Modern Neutral Palette - Tons Elegantes */
-    --gray-50: #f8f6f0;           /* Creme Muito Claro */
-    --gray-100: #f0ede4;          /* Creme Claro */
-    --gray-200: #e6e0d6;          /* Beige Claro */
-    --gray-300: #d4c5a9;          /* Beige Médio */
-    --gray-400: #c9b882;          /* Dourado Suave */
-    --gray-500: #b8860b;          /* Dourado */
-    --gray-600: #8b7355;          /* Marrom Claro */
-    --gray-700: #5d4e37;          /* Marrom Médio */
-    --gray-800: #3a3328;          /* Marrom Escuro */
-    --gray-900: #2c2c2c;          /* Preto Suave */
+    --gray-50: #F6ECDD;           /* Bege para fundos */
+    --gray-100: #F6ECDD;          /* Bege para fundos */
+    --gray-200: #F6ECDD;          /* Bege para fundos */
+    --gray-300: #F6ECDD;          /* Bege para fundos */
+    --gray-400: #A57964;          /* Marrom para texto */
+    --gray-500: #A57964;          /* Marrom para texto */
+    --gray-600: #A57964;          /* Marrom para texto */
+    --gray-700: #A57964;          /* Marrom para texto */
+    --gray-800: #A57964;          /* Marrom para texto */
+    --gray-900: #A57964;          /* Marrom para texto */
     
     /* Gradientes Elegantes e Sofisticados */
-    --gradient-primary: linear-gradient(135deg, var(--primary-terracotta) 0%, var(--deep-beige) 100%);
-    --gradient-accent: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-terracotta) 100%);
-    --gradient-hero: linear-gradient(135deg, var(--cream) 0%, var(--soft-cream) 100%);
-    --gradient-card: linear-gradient(135deg, var(--white) 0%, var(--pearl) 100%);
-    --gradient-dark: linear-gradient(135deg, var(--black) 0%, var(--terracotta-light) 100%);
-    --gradient-light: linear-gradient(135deg, var(--pearl) 0%, var(--soft-cream) 100%);
-    --gradient-loading: linear-gradient(135deg, #f8f6f0 0%, #f0ede4 25%, #d4af37 50%, #b8860b 75%, #8b7355 100%);
+    --gradient-primary: linear-gradient(135deg, var(--primary-brown) 0%, var(--soft-cream) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--primary-brown) 0%, var(--soft-cream) 100%);
+    --gradient-hero: linear-gradient(135deg, var(--soft-cream) 0%, var(--light-beige) 100%);
+    --gradient-card: linear-gradient(135deg, var(--white) 0%, var(--soft-cream) 100%);
+    --gradient-dark: linear-gradient(135deg, var(--primary-brown) 0%, var(--soft-cream) 100%);
+    --gradient-light: linear-gradient(135deg, var(--soft-cream) 0%, var(--light-beige) 100%);
+    --gradient-loading: linear-gradient(135deg, #F6ECDD 0%, #F6ECDD 25%, #A57964 50%, #A57964 75%, #A57964 100%);
     
     /* Animação do gradiente de carregamento */
     @keyframes gradientShift {
@@ -142,8 +143,8 @@ body {
     font-family: var(--font-primary);
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--terracotta-light);
-    background: linear-gradient(135deg, var(--cream) 0%, var(--soft-cream) 20%, var(--pearl) 40%, var(--white) 60%, var(--light-beige) 80%, var(--soft-cream) 100%);
+    color: var(--primary-brown);
+    background: var(--soft-cream);
     background-attachment: fixed;
     background-size: 400% 400%;
     animation: roseGradientShift 20s ease infinite;
@@ -187,7 +188,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #f8f6f0 0%, #f0ede4 25%, #d4af37 50%, #b8860b 75%, #8b7355 100%);
+    background: linear-gradient(135deg, #F6ECDD 0%, #F6ECDD 25%, #A57964 50%, #A57964 75%, #A57964 100%);
     background-size: 400% 400%;
     animation: gradientShift 8s ease-in-out infinite;
     display: flex;
@@ -237,13 +238,13 @@ ul {
     display: inline-block;
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    color: #2c2c2c;
+    color: var(--primary-brown);
     text-shadow: 0 3px 10px rgba(44, 44, 44, 0.3);
     animation: loadingLetterWave 3s ease-in-out infinite;
 }
 
 .loading-letter.surname {
-    color: #2c2c2c;
+    color: var(--primary-brown);
     font-style: italic;
     margin-left: 0.1em;
         text-shadow: 0 3px 10px rgba(44, 44, 44, 0.3);
@@ -298,11 +299,11 @@ ul {
 @keyframes loadingLetterWave {
     0%, 100% {
         transform: translateY(0px) scale(1);
-        color: #2c2c2c;
+        color: var(--primary-brown);
     }
     25% {
         transform: translateY(-5px) scale(1.05);
-        color: #3a3a3a;
+        color: var(--primary-brown);
         text-shadow: 0 5px 15px rgba(44, 44, 44, 0.4);
     }
     50% {
@@ -312,7 +313,7 @@ ul {
     }
     75% {
         transform: translateY(-3px) scale(1.02);
-        color: #2c2c2c;
+        color: var(--primary-brown);
         text-shadow: 0 5px 15px rgba(44, 44, 44, 0.4);
     }
 }
@@ -635,7 +636,7 @@ ul {
 }
 
 .heart:nth-child(odd) {
-    color: var(--terracotta-medium);
+    color: var(--primary-brown);
     text-shadow: 0 0 15px rgba(44, 44, 44, 0.6);
 }
 
@@ -691,7 +692,7 @@ ul {
     display: inline-block;
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--terracotta-light);
+    color: var(--primary-brown);
     text-shadow: 0 2px 4px rgba(44, 44, 44, 0.1);
 }
 
@@ -711,16 +712,16 @@ ul {
 }
 
 .logo-letter:hover {
-    color: var(--terracotta-medium) !important;
+    color: var(--dark-brown) !important;
     transform: translateY(-5px) scale(1.2) rotate(5deg) !important;
-    text-shadow: 0 5px 15px rgba(184, 134, 11, 0.4);
+    text-shadow: 0 5px 15px rgba(139, 90, 60, 0.4);
     z-index: 10;
 }
 
 .logo-letter.surname:hover {
-    color: var(--deep-brown) !important;
+    color: var(--dark-brown) !important;
     transform: translateY(-5px) scale(1.2) rotate(-5deg) !important;
-    text-shadow: 0 5px 15px rgba(93, 78, 55, 0.4);
+    text-shadow: 0 5px 15px rgba(139, 90, 60, 0.4);
 }
 
 /* Color Wave Animation */
@@ -744,16 +745,16 @@ ul {
 
 @keyframes colorWave {
     0% {
-        color: var(--terracotta-light);
+        color: var(--primary-brown);
         transform: translateY(0) scale(1);
     }
     50% {
-        color: var(--deep-beige);
+        color: var(--primary-brown);
         transform: translateY(-3px) scale(1.1);
         text-shadow: 0 3px 10px rgba(44, 44, 44, 0.5);
     }
     100% {
-        color: var(--terracotta-light);
+        color: var(--primary-brown);
         transform: translateY(0) scale(1);
     }
 }
@@ -817,14 +818,14 @@ ul {
 }
 
 .footer-logo:hover .logo-letter {
-    color: var(--terracotta-medium);
-    text-shadow: 0 2px 12px rgba(184, 134, 11, 0.6);
+    color: var(--dark-brown);
+    text-shadow: 0 2px 12px rgba(139, 90, 60, 0.6);
     transform: scale(1.05);
 }
 
 .footer-logo:hover .logo-letter.surname {
-    color: var(--deep-brown);
-    text-shadow: 0 2px 12px rgba(93, 78, 55, 0.6);
+    color: var(--dark-brown);
+    text-shadow: 0 2px 12px rgba(139, 90, 60, 0.6);
     transform: scale(1.05);
 }
 
@@ -851,13 +852,13 @@ ul {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--hover-terracotta);
+    background: var(--dark-brown);
     transition: width var(--transition-base);
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--hover-terracotta);
+    color: var(--dark-brown);
 }
 
 .nav-link:hover::after,
@@ -922,12 +923,12 @@ ul {
 
 .hero-title:hover {
     transform: translateY(-5px);
-    text-shadow: 0 10px 20px rgba(44, 44, 44, 0.3);
+    text-shadow: 0 10px 20px rgba(139, 90, 60, 0.3);
 }
 
 .title-main {
     display: block;
-    color: var(--terracotta-light);
+    color: var(--primary-brown);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -949,7 +950,7 @@ ul {
 }
 
 .title-main:hover {
-    color: var(--deep-beige);
+    color: var(--dark-brown);
     transform: scale(1.05);
 }
 
@@ -971,7 +972,7 @@ ul {
 
 .letter:hover {
     transform: scale(1.2) rotate(5deg);
-    color: var(--terracotta-medium);
+    color: var(--primary-brown);
     text-shadow: 0 0 10px rgba(44, 44, 44, 0.8);
 }
 
@@ -1078,7 +1079,7 @@ ul {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--deep-beige);
+    color: var(--primary-brown);
     font-family: var(--font-display);
 }
 
@@ -1214,7 +1215,7 @@ ul {
 .shape-2 {
     width: 120px;
     height: 120px;
-    background: var(--vivid-neon-pink);
+    background: var(--primary-brown);
     top: 60%;
     right: 15%;
     animation-delay: 2s;
@@ -1309,7 +1310,7 @@ section::before {
     font-family: var(--font-display);
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 600;
-    color: var(--primary-accent);
+    color: var(--primary-brown);
     margin-bottom: var(--space-md);
 }
 
@@ -1335,7 +1336,7 @@ section::before {
 .about-text h3 {
     font-family: 'Dancing Script', cursive;
     font-size: 2.2rem;
-    color: var(--primary-accent);
+    color: var(--primary-brown);
     margin-bottom: var(--space-lg);
     font-weight: 500;
     letter-spacing: 1px;
@@ -1657,7 +1658,7 @@ section::before {
 .service-content h3 {
     font-family: 'Dancing Script', cursive;
     font-size: 1.6rem;
-    color: var(--primary-accent);
+    color: var(--primary-brown);
     margin-bottom: var(--space-md);
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -1693,7 +1694,7 @@ section::before {
     background: var(--gradient-card);
 }
 
-/* Cards com Rosa Transparente e Bordas Acesas */
+/* Cards com Fundo Transparente e Bordas Elegantes */
 .gallery-item {
     position: relative;
     border-radius: var(--radius-xl);
@@ -1880,7 +1881,7 @@ section::before {
 
 .nav-dot.active,
 .nav-dot:hover {
-    background: var(--hover-terracotta);
+    background: var(--dark-brown);
     transform: scale(1.2);
 }
 
@@ -1939,7 +1940,7 @@ section::before {
 
 .contact-details h3 {
     font-family: 'Dancing Script', cursive;
-    color: var(--primary-accent);
+    color: var(--primary-brown);
     font-weight: 500;
     margin-bottom: var(--space-sm);
     font-size: 1.4rem;
