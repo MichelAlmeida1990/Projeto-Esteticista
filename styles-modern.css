@@ -1,67 +1,67 @@
 /* Modern CSS Variables - Paleta Terrosa Elegante */
 :root {
-    /* Paleta Principal - Tons Terrosos e Neutros */
-    --primary-terracotta: #dcd3b9;    /* Cor principal - Beige Terroso */
-    --soft-cream: #f7f5f0;            /* Creme Suave */
-    --light-beige: #ede8dc;           /* Beige Claro */
-    --medium-beige: #c4b5a0;          /* Beige Médio */
-    --deep-beige: #b8a082;            /* Beige Escuro */
-    --terracotta-light: #a68b5b;      /* Terracotta Claro */
-    --cream: #f7f5f0;                 /* Creme */
-    --pearl: #ede8dc;                 /* Pérola */
+    /* Paleta Principal - Elegante e Sofisticada */
+    --primary-terracotta: #A8A28A;    /* Cor Principal - Beige Cinza */
+    --soft-cream: #f8f6f0;            /* Creme Elegante */
+    --light-beige: #f0ede4;           /* Beige Claro */
+    --medium-beige: #e6e0d6;          /* Beige Médio */
+    --deep-beige: #d4c5a9;            /* Beige Dourado */
+    --terracotta-light: #c9b882;      /* Dourado Suave */
+    --cream: #f8f6f0;                 /* Creme */
+    --pearl: #f0ede4;                 /* Pérola */
     --white: #ffffff;
-    --black: #3a3328;                 /* Marrom Escuro */
+    --black: #2c2c2c;                 /* Preto Suave */
     
-    /* Tons Complementares Terrosos */
-    --terracotta-medium: #8b7355;     /* Terracotta Médio */
-    --warm-beige: #c4b5a0;            /* Beige Quente */
-    --terracotta: #a68b5b;            /* Terracotta */
-    --earthy-brown: #6b5b47;          /* Marrom Terroso */
-    --champagne: #dcd3b9;             /* Champagne */
-    --terracotta-dark: #8b7355;       /* Terracotta Escuro */
-    --light-terracotta: #ede8dc;      /* Terracotta Claro */
-    --soft-terracotta: #f7f5f0;       /* Terracotta Suave */
+    /* Tons Complementares Elegantes */
+    --terracotta-medium: #b8860b;     /* Dourado Escuro */
+    --warm-beige: #e6e0d6;            /* Beige Quente */
+    --terracotta: #d4af37;            /* Dourado */
+    --earthy-brown: #8b7355;          /* Marrom Elegante */
+    --champagne: #d4af37;             /* Champagne Dourado */
+    --terracotta-dark: #b8860b;       /* Dourado Escuro */
+    --light-terracotta: #f0ede4;      /* Dourado Claro */
+    --soft-terracotta: #f8f6f0;       /* Dourado Suave */
     
-    /* Tons Terrosos Complementares */
-    --primary-accent: #a68b5b;        /* Terracotta Principal */
-    --vivid-beige: #b8a082;           /* Beige Vívido */
-    --royal-terracotta: #8b7355;      /* Terracotta Real */
-    --dark-brown: #6b5b47;            /* Marrom Terroso */
-    --deep-brown: #5a4a3a;            /* Marrom Escuro */
-    --hover-terracotta: #8b7355;      /* Hover Terroso */
+    /* Tons Elegantes Complementares */
+    --primary-accent: #d4af37;        /* Dourado Principal */
+    --vivid-beige: #e6e0d6;           /* Beige Vívido */
+    --royal-terracotta: #b8860b;      /* Dourado Real */
+    --dark-brown: #8b7355;            /* Marrom Elegante */
+    --deep-brown: #5d4e37;            /* Marrom Escuro */
+    --hover-terracotta: #b8860b;      /* Hover Dourado */
     
-    /* Tons Neutros Terrosos */
-    --slate-50: #f7f5f0;          /* Creme Muito Claro */
-    --slate-100: #ede8dc;         /* Creme Claro */
-    --slate-200: #e0d6c7;         /* Beige Claro */
-    --slate-300: #d1c4b3;         /* Beige Médio */
-    --slate-400: #c4b5a0;         /* Beige */
-    --slate-500: #a68b5b;         /* Terracotta */
+    /* Tons Neutros Elegantes */
+    --slate-50: #f8f6f0;          /* Creme Muito Claro */
+    --slate-100: #f0ede4;         /* Creme Claro */
+    --slate-200: #e6e0d6;         /* Beige Claro */
+    --slate-300: #d4c5a9;         /* Beige Médio */
+    --slate-400: #c9b882;         /* Dourado Suave */
+    --slate-500: #b8860b;         /* Dourado */
     --slate-600: #8b7355;         /* Marrom Claro */
-    --slate-700: #6b5b47;         /* Marrom Médio */
-    --slate-800: #5a4a3a;         /* Marrom Escuro */
-    --slate-900: #3a3328;         /* Marrom Muito Escuro */
+    --slate-700: #5d4e37;         /* Marrom Médio */
+    --slate-800: #3a3328;         /* Marrom Escuro */
+    --slate-900: #2c2c2c;         /* Preto Suave */
     
-    /* Modern Neutral Palette - Tons Terrosos */
-    --gray-50: #f7f5f0;           /* Creme Muito Claro */
-    --gray-100: #ede8dc;          /* Creme Claro */
-    --gray-200: #e0d6c7;          /* Beige Claro */
-    --gray-300: #d1c4b3;          /* Beige Médio */
-    --gray-400: #c4b5a0;          /* Beige */
-    --gray-500: #a68b5b;          /* Terracotta */
+    /* Modern Neutral Palette - Tons Elegantes */
+    --gray-50: #f8f6f0;           /* Creme Muito Claro */
+    --gray-100: #f0ede4;          /* Creme Claro */
+    --gray-200: #e6e0d6;          /* Beige Claro */
+    --gray-300: #d4c5a9;          /* Beige Médio */
+    --gray-400: #c9b882;          /* Dourado Suave */
+    --gray-500: #b8860b;          /* Dourado */
     --gray-600: #8b7355;          /* Marrom Claro */
-    --gray-700: #6b5b47;          /* Marrom Médio */
-    --gray-800: #5a4a3a;          /* Marrom Escuro */
-    --gray-900: #3a3328;          /* Marrom Muito Escuro */
+    --gray-700: #5d4e37;          /* Marrom Médio */
+    --gray-800: #3a3328;          /* Marrom Escuro */
+    --gray-900: #2c2c2c;          /* Preto Suave */
     
-    /* Gradientes Terrosos Elegantes */
+    /* Gradientes Elegantes e Sofisticados */
     --gradient-primary: linear-gradient(135deg, var(--primary-terracotta) 0%, var(--deep-beige) 100%);
     --gradient-accent: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-terracotta) 100%);
     --gradient-hero: linear-gradient(135deg, var(--cream) 0%, var(--soft-cream) 100%);
     --gradient-card: linear-gradient(135deg, var(--white) 0%, var(--pearl) 100%);
     --gradient-dark: linear-gradient(135deg, var(--black) 0%, var(--terracotta-light) 100%);
     --gradient-light: linear-gradient(135deg, var(--pearl) 0%, var(--soft-cream) 100%);
-    --gradient-loading: linear-gradient(135deg, #f7f5f0 0%, #ede8dc 25%, #dcd3b9 50%, #c4b5a0 75%, #a68b5b 100%);
+    --gradient-loading: linear-gradient(135deg, #f8f6f0 0%, #f0ede4 25%, #d4af37 50%, #b8860b 75%, #8b7355 100%);
     
     /* Animação do gradiente de carregamento */
     @keyframes gradientShift {
@@ -187,7 +187,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #0ea5e9 50%, #0284c7 75%, #0369a1 100%);
+    background: linear-gradient(135deg, #f8f6f0 0%, #f0ede4 25%, #d4af37 50%, #b8860b 75%, #8b7355 100%);
     background-size: 400% 400%;
     animation: gradientShift 8s ease-in-out infinite;
     display: flex;
@@ -237,16 +237,16 @@ ul {
     display: inline-block;
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--terracotta-light);
-    text-shadow: 0 3px 10px rgba(3, 105, 161, 0.2);
+    color: #2c2c2c;
+    text-shadow: 0 3px 10px rgba(44, 44, 44, 0.3);
     animation: loadingLetterWave 3s ease-in-out infinite;
 }
 
 .loading-letter.surname {
-    color: var(--primary-terracotta);
+    color: #2c2c2c;
     font-style: italic;
     margin-left: 0.1em;
-        text-shadow: 0 3px 10px rgba(30, 64, 175, 0.2);
+        text-shadow: 0 3px 10px rgba(44, 44, 44, 0.3);
 }
 
 .loading-separator {
@@ -288,39 +288,39 @@ ul {
 
 @keyframes loadingLogoGlow {
     0%, 100% {
-        filter: drop-shadow(0 0 15px rgba(147, 51, 234, 0.4));
+        filter: drop-shadow(0 0 15px rgba(44, 44, 44, 0.4));
     }
     50% {
-        filter: drop-shadow(0 0 25px rgba(147, 51, 234, 0.7));
+        filter: drop-shadow(0 0 25px rgba(44, 44, 44, 0.7));
     }
 }
 
 @keyframes loadingLetterWave {
     0%, 100% {
         transform: translateY(0px) scale(1);
-        color: var(--terracotta-light);
+        color: #2c2c2c;
     }
     25% {
         transform: translateY(-5px) scale(1.05);
-        color: var(--deep-beige);
-        text-shadow: 0 5px 15px rgba(2, 132, 199, 0.4);
+        color: #3a3a3a;
+        text-shadow: 0 5px 15px rgba(44, 44, 44, 0.4);
     }
     50% {
         transform: translateY(-8px) scale(1.1);
-        color: var(--primary-terracotta);
-        text-shadow: 0 8px 20px rgba(30, 64, 175, 0.5);
+        color: #1a1a1a;
+        text-shadow: 0 8px 20px rgba(44, 44, 44, 0.5);
     }
     75% {
         transform: translateY(-3px) scale(1.02);
-        color: var(--terracotta-medium);
-        text-shadow: 0 5px 15px rgba(232, 121, 249, 0.4);
+        color: #2c2c2c;
+        text-shadow: 0 5px 15px rgba(44, 44, 44, 0.4);
     }
 }
 
 @keyframes loadingLetterWave .surname {
     50% {
-        color: var(--terracotta-medium) !important;
-        text-shadow: 0 8px 20px rgba(232, 121, 249, 0.5);
+        color: #2c2c2c !important;
+        text-shadow: 0 8px 20px rgba(44, 44, 44, 0.5);
     }
 }
 
@@ -424,15 +424,15 @@ ul {
     left: 0;
     right: 0;
     background: linear-gradient(135deg, 
-        rgba(37, 99, 235, 0.85) 0%, 
-        rgba(30, 64, 175, 0.88) 25%, 
-        rgba(14, 165, 233, 0.82) 50%, 
-        rgba(30, 64, 175, 0.88) 75%, 
-        rgba(37, 99, 235, 0.85) 100%);
+        rgba(44, 44, 44, 0.95) 0%, 
+        rgba(44, 44, 44, 0.98) 25%, 
+        rgba(44, 44, 44, 0.92) 50%, 
+        rgba(44, 44, 44, 0.98) 75%, 
+        rgba(44, 44, 44, 0.95) 100%);
     backdrop-filter: blur(25px) saturate(200%);
     -webkit-backdrop-filter: blur(25px) saturate(200%);
-    border-bottom: 1px solid rgba(30, 64, 175, 0.35);
-    box-shadow: 0 8px 32px rgba(30, 64, 175, 0.18);
+    border-bottom: 1px solid rgba(44, 44, 44, 0.5);
+    box-shadow: 0 8px 32px rgba(44, 44, 44, 0.3);
     z-index: var(--z-fixed);
     transition: all var(--transition-base);
     animation: navbarShimmer 8s ease-in-out infinite;
@@ -440,33 +440,33 @@ ul {
 
 .navbar.scrolled {
     background: linear-gradient(135deg, 
-        rgba(37, 99, 235, 0.92) 0%, 
-        rgba(30, 64, 175, 0.95) 25%, 
-        rgba(14, 165, 233, 0.88) 50%, 
-        rgba(30, 64, 175, 0.95) 75%, 
-        rgba(37, 99, 235, 0.92) 100%);
+        rgba(44, 44, 44, 0.98) 0%, 
+        rgba(44, 44, 44, 0.99) 25%, 
+        rgba(44, 44, 44, 0.96) 50%, 
+        rgba(44, 44, 44, 0.99) 75%, 
+        rgba(44, 44, 44, 0.98) 100%);
     backdrop-filter: blur(30px) saturate(220%);
     -webkit-backdrop-filter: blur(30px) saturate(220%);
-    box-shadow: 0 12px 40px rgba(30, 64, 175, 0.22);
-    border-bottom: 1px solid rgba(30, 64, 175, 0.45);
+    box-shadow: 0 12px 40px rgba(44, 44, 44, 0.4);
+    border-bottom: 1px solid rgba(44, 44, 44, 0.6);
 }
 
 @keyframes navbarShimmer {
     0%, 100% {
         background: linear-gradient(135deg, 
-            rgba(37, 99, 235, 0.85) 0%,
-            rgba(30, 64, 175, 0.88) 25%,
-            rgba(14, 165, 233, 0.82) 50%,
-            rgba(30, 64, 175, 0.88) 75%,
-            rgba(37, 99, 235, 0.85) 100%);
+            rgba(44, 44, 44, 0.95) 0%,
+            rgba(44, 44, 44, 0.98) 25%,
+            rgba(44, 44, 44, 0.92) 50%,
+            rgba(44, 44, 44, 0.98) 75%,
+            rgba(44, 44, 44, 0.95) 100%);
     }
     50% {
         background: linear-gradient(135deg, 
-            rgba(14, 165, 233, 0.82) 0%, 
-            rgba(37, 99, 235, 0.88) 25%, 
-            rgba(30, 64, 175, 0.85) 50%, 
-            rgba(37, 99, 235, 0.88) 75%, 
-            rgba(14, 165, 233, 0.82) 100%);
+            rgba(44, 44, 44, 0.92) 0%, 
+            rgba(44, 44, 44, 0.95) 25%, 
+            rgba(44, 44, 44, 0.98) 50%, 
+            rgba(44, 44, 44, 0.95) 75%, 
+            rgba(44, 44, 44, 0.92) 100%);
     }
 }
 
@@ -516,9 +516,9 @@ ul {
 .nav-particle {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(30, 64, 175, 0.45) 0%, rgba(14, 165, 233, 0.2) 70%, transparent 100%);
+    background: radial-gradient(circle, rgba(44, 44, 44, 0.45) 0%, rgba(44, 44, 44, 0.2) 70%, transparent 100%);
     animation: navParticleFloat 12s ease-in-out infinite;
-    box-shadow: 0 0 20px rgba(30, 64, 175, 0.3);
+    box-shadow: 0 0 20px rgba(44, 44, 44, 0.3);
 }
 
 .nav-particle-1 {
@@ -631,12 +631,12 @@ ul {
     opacity: 0.8;
     animation: heartFall linear infinite;
     pointer-events: none;
-    text-shadow: 0 0 15px rgba(244, 114, 182, 0.6);
+    text-shadow: 0 0 15px rgba(44, 44, 44, 0.6);
 }
 
 .heart:nth-child(odd) {
     color: var(--terracotta-medium);
-    text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+    text-shadow: 0 0 15px rgba(44, 44, 44, 0.6);
 }
 
 .heart:nth-child(3n) {
@@ -711,16 +711,16 @@ ul {
 }
 
 .logo-letter:hover {
-    color: var(--deep-beige) !important;
+    color: var(--terracotta-medium) !important;
     transform: translateY(-5px) scale(1.2) rotate(5deg) !important;
-    text-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+    text-shadow: 0 5px 15px rgba(184, 134, 11, 0.4);
     z-index: 10;
 }
 
 .logo-letter.surname:hover {
-    color: var(--terracotta-medium) !important;
+    color: var(--deep-brown) !important;
     transform: translateY(-5px) scale(1.2) rotate(-5deg) !important;
-    text-shadow: 0 5px 15px rgba(232, 121, 249, 0.4);
+    text-shadow: 0 5px 15px rgba(93, 78, 55, 0.4);
 }
 
 /* Color Wave Animation */
@@ -750,7 +750,7 @@ ul {
     50% {
         color: var(--deep-beige);
         transform: translateY(-3px) scale(1.1);
-        text-shadow: 0 3px 10px rgba(2, 132, 199, 0.5);
+        text-shadow: 0 3px 10px rgba(44, 44, 44, 0.5);
     }
     100% {
         color: var(--terracotta-light);
@@ -761,7 +761,7 @@ ul {
 @keyframes colorWave .surname {
     50% {
         color: var(--terracotta-medium) !important;
-        text-shadow: 0 3px 10px rgba(232, 121, 249, 0.5);
+        text-shadow: 0 3px 10px rgba(44, 44, 44, 0.5);
     }
 }
 
@@ -817,14 +817,14 @@ ul {
 }
 
 .footer-logo:hover .logo-letter {
-    color: var(--vivid-beige);
-    text-shadow: 0 2px 12px rgba(59, 130, 246, 0.6);
+    color: var(--terracotta-medium);
+    text-shadow: 0 2px 12px rgba(184, 134, 11, 0.6);
     transform: scale(1.05);
 }
 
 .footer-logo:hover .logo-letter.surname {
-    color: var(--primary-accent);
-    text-shadow: 0 2px 12px rgba(37, 99, 235, 0.6);
+    color: var(--deep-brown);
+    text-shadow: 0 2px 12px rgba(93, 78, 55, 0.6);
     transform: scale(1.05);
 }
 
@@ -972,7 +972,7 @@ ul {
 .letter:hover {
     transform: scale(1.2) rotate(5deg);
     color: var(--terracotta-medium);
-    text-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
+    text-shadow: 0 0 10px rgba(44, 44, 44, 0.8);
 }
 
 /* Animação das letras sumindo e voltando */
@@ -1142,7 +1142,7 @@ ul {
 .floating-card i {
     color: var(--hover-terracotta);
     font-size: 1.2rem;
-    text-shadow: 0 2px 4px rgba(30, 64, 175, 0.3);
+    text-shadow: 0 2px 4px rgba(44, 44, 44, 0.3);
 }
 
 .floating-card span {
@@ -1477,7 +1477,7 @@ section::before {
     text-align: center;
     gap: var(--space-md);
     padding: var(--space-xl);
-    background: rgba(244, 114, 182, 0.1);
+    background: rgba(44, 44, 44, 0.1);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
@@ -1496,7 +1496,7 @@ section::before {
     transform: translateY(-5px) scale(1.02);
     box-shadow: var(--shadow-xl);
     border: 2px solid var(--hover-terracotta);
-    box-shadow: 0 0 20px rgba(30, 64, 175, 0.4), var(--shadow-xl);
+    box-shadow: 0 0 20px rgba(44, 44, 44, 0.4), var(--shadow-xl);
 }
 
 .expertise-icon {
@@ -1591,12 +1591,12 @@ section::before {
 }
 
 .service-card {
-    background: rgba(232, 121, 249, 0.06);
+    background: rgba(44, 44, 44, 0.1);
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border: 1px solid rgba(232, 121, 249, 0.12);
+    border: 1px solid rgba(44, 44, 44, 0.2);
     backdrop-filter: blur(12px);
 }
 
@@ -1604,7 +1604,7 @@ section::before {
     transform: translateY(-5px) scale(1.02);
     box-shadow: var(--shadow-xl);
     border: 2px solid var(--hover-terracotta);
-    box-shadow: 0 0 20px rgba(30, 64, 175, 0.4), var(--shadow-xl);
+    box-shadow: 0 0 20px rgba(44, 44, 44, 0.4), var(--shadow-xl);
 }
 
 .service-image {
@@ -1701,7 +1701,7 @@ section::before {
     box-shadow: var(--shadow-lg);
     cursor: pointer;
     transition: all var(--transition-base);
-    background: rgba(244, 114, 182, 0.1);
+    background: rgba(44, 44, 44, 0.1);
     border: 2px solid transparent;
     backdrop-filter: blur(10px);
 }
@@ -1710,7 +1710,7 @@ section::before {
     transform: translateY(-5px) scale(1.02);
     box-shadow: var(--shadow-xl);
     border: 2px solid var(--primary-terracotta);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), var(--shadow-xl);
+    box-shadow: 0 0 20px rgba(44, 44, 44, 0.4), var(--shadow-xl);
 }
 
 .gallery-grid {
@@ -1803,18 +1803,18 @@ section::before {
 }
 
 .testimonial-content {
-    background: rgba(232, 121, 249, 0.08);
+    background: rgba(44, 44, 44, 0.08);
     padding: var(--space-3xl);
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(232, 121, 249, 0.15);
+    border: 1px solid rgba(44, 44, 44, 0.15);
     backdrop-filter: blur(12px);
     transition: all var(--transition-base);
 }
 
 .testimonial-content:hover {
     border: 2px solid var(--hover-terracotta);
-    box-shadow: 0 0 20px rgba(30, 64, 175, 0.4), var(--shadow-lg);
+    box-shadow: 0 0 20px rgba(44, 44, 44, 0.4), var(--shadow-lg);
 }
 
 .stars {
@@ -1906,11 +1906,11 @@ section::before {
     align-items: flex-start;
     gap: var(--space-lg);
     padding: var(--space-xl);
-    background: rgba(232, 121, 249, 0.08);
+    background: rgba(44, 44, 44, 0.08);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border: 1px solid rgba(232, 121, 249, 0.15);
+    border: 1px solid rgba(44, 44, 44, 0.15);
     backdrop-filter: blur(12px);
 }
 
@@ -1918,7 +1918,7 @@ section::before {
     transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow-lg);
     border: 2px solid var(--hover-terracotta);
-    box-shadow: 0 0 20px rgba(30, 64, 175, 0.4), var(--shadow-lg);
+    box-shadow: 0 0 20px rgba(44, 44, 44, 0.4), var(--shadow-lg);
 }
 
 .contact-icon {
@@ -2013,7 +2013,7 @@ section::before {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--hover-terracotta);
-    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+    box-shadow: 0 0 0 3px rgba(44, 44, 44, 0.1);
 }
 
 .form-group textarea {
@@ -2279,13 +2279,13 @@ section::before {
         background: linear-gradient(135deg, 
             rgba(240, 249, 255, 0.95) 0%, 
             rgba(224, 242, 254, 0.98) 50%, 
-            rgba(30, 64, 175, 0.9) 100%);
+            rgba(44, 44, 44, 0.9) 100%);
         backdrop-filter: blur(25px) saturate(180%);
         -webkit-backdrop-filter: blur(25px) saturate(180%);
         flex-direction: column;
         padding: var(--space-xl);
-        box-shadow: 0 12px 40px rgba(30, 64, 175, 0.2);
-        border-bottom: 1px solid rgba(30, 64, 175, 0.3);
+        box-shadow: 0 12px 40px rgba(44, 44, 44, 0.2);
+        border-bottom: 1px solid rgba(44, 44, 44, 0.3);
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
