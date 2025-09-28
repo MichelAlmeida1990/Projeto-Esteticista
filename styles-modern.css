@@ -1,67 +1,67 @@
-/* Modern CSS Variables - Paleta Suave e Elegante */
+/* Modern CSS Variables - Paleta Terrosa Elegante */
 :root {
-    /* Paleta Principal - Azul Marinho Elegante */
-    --primary-rose: #1e40af;
-    --soft-pink: #f0f9ff;
-    --blush-pink: #e0f2fe;
-    --rose-pink: #0ea5e9;
-    --deep-rose: #0284c7;
-    --dusty-rose: #0369a1;
-    --cream: #f0f9ff;
-    --pearl: #e0f2fe;
+    /* Paleta Principal - Tons Terrosos e Neutros */
+    --primary-rose: #dcd3b9;      /* Cor principal - Beige Terroso */
+    --soft-pink: #f7f5f0;         /* Creme Suave */
+    --blush-pink: #ede8dc;        /* Beige Claro */
+    --rose-pink: #c4b5a0;         /* Beige Médio */
+    --deep-rose: #b8a082;         /* Beige Escuro */
+    --dusty-rose: #a68b5b;        /* Terracotta Claro */
+    --cream: #f7f5f0;             /* Creme */
+    --pearl: #ede8dc;             /* Pérola */
     --white: #ffffff;
-    --black: #1f2937;
+    --black: #3a3328;             /* Marrom Escuro */
     
-    /* Tons Complementares Sofisticados */
-    --lavender: #a855f7;
-    --peach: #fb7185;
-    --coral: #f87171;
-    --mauve: #c084fc;
-    --champagne: #fde68a;
-    --lilac: #a78bfa;
-    --light-lilac: #e9d5ff;
-    --soft-lilac: #f3e8ff;
+    /* Tons Complementares Terrosos */
+    --lavender: #8b7355;          /* Terracotta Médio */
+    --peach: #c4b5a0;             /* Beige Quente */
+    --coral: #a68b5b;             /* Terracotta */
+    --mauve: #6b5b47;             /* Marrom Terroso */
+    --champagne: #dcd3b9;         /* Champagne */
+    --lilac: #8b7355;             /* Lilás Terroso */
+    --light-lilac: #ede8dc;       /* Lilás Claro */
+    --soft-lilac: #f7f5f0;        /* Lilás Suave */
     
-    /* Tons de Azul Marinho */
-    --primary-blue: #1e3a8a;
-    --vivid-azure: #2563eb;
-    --royal-blue: #1d4ed8;
-    --navy-blue: #1e40af;
-    --dark-navy: #0f172a;
-    --navy-hover: #1e40af;
+    /* Tons Terrosos Complementares */
+    --primary-blue: #a68b5b;      /* Terracotta Principal */
+    --vivid-azure: #b8a082;       /* Beige Vívido */
+    --royal-blue: #8b7355;        /* Terracotta Real */
+    --navy-blue: #6b5b47;         /* Marrom Terroso */
+    --dark-navy: #5a4a3a;         /* Marrom Escuro */
+    --navy-hover: #8b7355;        /* Hover Terroso */
     
-    /* Tons Neutros Elegantes */
-    --slate-50: #f8fafc;
-    --slate-100: #f1f5f9;
-    --slate-200: #e2e8f0;
-    --slate-300: #cbd5e1;
-    --slate-400: #94a3b8;
-    --slate-500: #64748b;
-    --slate-600: #475569;
-    --slate-700: #334155;
-    --slate-800: #1e293b;
-    --slate-900: #0f172a;
+    /* Tons Neutros Terrosos */
+    --slate-50: #f7f5f0;          /* Creme Muito Claro */
+    --slate-100: #ede8dc;         /* Creme Claro */
+    --slate-200: #e0d6c7;         /* Beige Claro */
+    --slate-300: #d1c4b3;         /* Beige Médio */
+    --slate-400: #c4b5a0;         /* Beige */
+    --slate-500: #a68b5b;         /* Terracotta */
+    --slate-600: #8b7355;         /* Marrom Claro */
+    --slate-700: #6b5b47;         /* Marrom Médio */
+    --slate-800: #5a4a3a;         /* Marrom Escuro */
+    --slate-900: #3a3328;         /* Marrom Muito Escuro */
     
-    /* Modern Neutral Palette */
-    --gray-50: #fdf2f8;
-    --gray-100: #fce7f3;
-    --gray-200: #fbcfe8;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #831843;
+    /* Modern Neutral Palette - Tons Terrosos */
+    --gray-50: #f7f5f0;           /* Creme Muito Claro */
+    --gray-100: #ede8dc;          /* Creme Claro */
+    --gray-200: #e0d6c7;          /* Beige Claro */
+    --gray-300: #d1c4b3;          /* Beige Médio */
+    --gray-400: #c4b5a0;          /* Beige */
+    --gray-500: #a68b5b;          /* Terracotta */
+    --gray-600: #8b7355;          /* Marrom Claro */
+    --gray-700: #6b5b47;          /* Marrom Médio */
+    --gray-800: #5a4a3a;          /* Marrom Escuro */
+    --gray-900: #3a3328;          /* Marrom Muito Escuro */
     
-    /* Gradientes Azul Marinho Elegantes */
+    /* Gradientes Terrosos Elegantes */
     --gradient-primary: linear-gradient(135deg, var(--primary-rose) 0%, var(--deep-rose) 100%);
     --gradient-accent: linear-gradient(135deg, var(--navy-blue) 0%, var(--primary-rose) 100%);
     --gradient-hero: linear-gradient(135deg, var(--cream) 0%, var(--soft-pink) 100%);
     --gradient-card: linear-gradient(135deg, var(--white) 0%, var(--pearl) 100%);
     --gradient-dark: linear-gradient(135deg, var(--black) 0%, var(--dusty-rose) 100%);
     --gradient-light: linear-gradient(135deg, var(--pearl) 0%, var(--soft-pink) 100%);
-    --gradient-loading: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #0ea5e9 50%, #0284c7 75%, #0369a1 100%);
+    --gradient-loading: linear-gradient(135deg, #f7f5f0 0%, #ede8dc 25%, #dcd3b9 50%, #c4b5a0 75%, #a68b5b 100%);
     
     /* Animação do gradiente de carregamento */
     @keyframes gradientShift {
